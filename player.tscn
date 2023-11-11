@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://r848tilxesxf"]
+[gd_scene load_steps=8 format=3 uid="uid://r848tilxesxf"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_j62bo"]
 [ext_resource type="Texture2D" uid="uid://csnan8uhxyyjh" path="res://0_PNG/player/Player.png" id="2_vakqu"]
 [ext_resource type="Texture2D" uid="uid://dwki2w7n64dgx" path="res://0_PNG/player/Player_n.png" id="3_rbnkv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p77bh"]
+size = Vector2(26, 55)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3l8f3"]
 diffuse_texture = ExtResource("2_vakqu")
@@ -23,9 +26,9 @@ position = Vector2(512, 288)
 collision_layer = 7
 script = ExtResource("1_j62bo")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PackedVector2Array(20, 32, -10, 32, -14.851, 25.8886, -18, 15.4915, -20, 1, -23, -12, -16, -20, -6, -24, 2, -24, 19, -27, 22, -22, 22, 7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_p77bh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("CanvasTexture_3l8f3")

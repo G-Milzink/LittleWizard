@@ -24,7 +24,9 @@ func _handleJump(delta):
 			velocity.y = _Globals.player_jump_velocity
 
 func _handleMovement(delta):
-	if !_Globals.is_climbing:
+	if _Globals.is_climbing:
+		velocity.x = 0
+	else: 
 		var direction = Input.get_axis("move_left", "move_right")
 		if direction:
 			velocity.x = direction * _Globals.player_move_speed
@@ -37,7 +39,7 @@ func _handleMovement(delta):
 		elif direction > 0:
 			sprite_player_body.set_flip_h(false)
 			staff_light.position.x = 20
-	else: velocity.x = 0
+	
 
 func _handleClimbing(delta):
 	var climb_direction = 0
@@ -57,7 +59,7 @@ func _handleClimbing(delta):
 			self.set_collision_mask_value(1,false)
 	
 	if climb_direction != 0:
-		velocity.y = climb_direction * _Globals.player_move_speed
+		velocity.y = climb_direction * _Globals.player_climb_speed
 	
 	if !_Globals.is_climbing:
 		self.set_collision_mask_value(1,true)

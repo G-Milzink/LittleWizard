@@ -1,12 +1,12 @@
+AnimatedSprite2D
+CollisionShape2D
 AnimationPlayer
 Sprite2D
-CollisionShape2D
 Area2D
 Node2D
 Node
 PointLight2D
 LightOccluder2D
-AnimatedSprite2D
 DirectionalLight2D
 CanvasModulate
 OmniLight3D
