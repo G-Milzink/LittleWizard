@@ -5,4 +5,6 @@ extends Node
 
 var current_spell = ""
 
-var can_climb = false
+var can_climb_up = false
+var can_climb_down = false
+var is_climbing = false
