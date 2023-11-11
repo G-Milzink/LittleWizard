@@ -4,4 +4,4 @@
 
 [node name="Globals" type="Node"]
 script = ExtResource("1_xvy7o")
-player_jump_velocity = -335
+player_jump_velocity = -365

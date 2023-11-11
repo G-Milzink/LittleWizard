@@ -1,9 +1,82 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct4e7prkjsq5v"]
+[gd_scene load_steps=10 format=3 uid="uid://ct4e7prkjsq5v"]
 
 [ext_resource type="Script" path="res://scripts/ladder_trigger.gd" id="1_346ox"]
+[ext_resource type="Texture2D" uid="uid://v1dunr0eean1" path="res://icon.svg" id="2_ht7dk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4447"]
 size = Vector2(24, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dqc4"]
+size = Vector2(20, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_niy3f"]
+size = Vector2(20, 10)
+
+[sub_resource type="Animation" id="Animation_1pdxo"]
+resource_name = "up_arrow_bobbing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon_Area_Down/Down_Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -96), Vector2(0, -102), Vector2(0, -96)]
+}
+
+[sub_resource type="Animation" id="Animation_t6wl0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon_Area_Down/Down_Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -96)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Icon_Area_Up/Up_Arrow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -96)]
+}
+
+[sub_resource type="Animation" id="Animation_ahso0"]
+resource_name = "down_arrow_bobbing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon_Area_Up/Up_Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -96), Vector2(0, -90), Vector2(0, -96)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o430u"]
+_data = {
+"RESET": SubResource("Animation_t6wl0"),
+"down_arrow_bobbing": SubResource("Animation_ahso0"),
+"up_arrow_bobbing": SubResource("Animation_1pdxo")
+}
 
 [node name="LadderTrigger" type="Node2D"]
 script = ExtResource("1_346ox")
@@ -24,7 +97,41 @@ collision_mask = 2
 position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_s4447")
 
+[node name="Icon_Area_Up" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon_Area_Up"]
+shape = SubResource("RectangleShape2D_5dqc4")
+
+[node name="Up_Arrow" type="Sprite2D" parent="Icon_Area_Up"]
+position = Vector2(0, -96)
+scale = Vector2(0.101563, 0.101563)
+texture = ExtResource("2_ht7dk")
+
+[node name="Icon_Area_Down" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon_Area_Down"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_niy3f")
+
+[node name="Down_Arrow" type="Sprite2D" parent="Icon_Area_Down"]
+position = Vector2(0, -96)
+scale = Vector2(0.101563, 0.101563)
+texture = ExtResource("2_ht7dk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o430u")
+}
+
 [connection signal="body_entered" from="Up_Area" to="." method="_on_up_area_body_entered"]
 [connection signal="body_exited" from="Up_Area" to="." method="_on_up_area_body_exited"]
 [connection signal="body_entered" from="Down_Area" to="." method="_on_down_area_body_entered"]
 [connection signal="body_exited" from="Down_Area" to="." method="_on_down_area_body_exited"]
+[connection signal="body_entered" from="Icon_Area_Up" to="." method="_on_icon_area_up_body_entered"]
+[connection signal="body_exited" from="Icon_Area_Up" to="." method="_on_icon_area_up_body_exited"]
+[connection signal="body_entered" from="Icon_Area_Down" to="." method="_on_icon_area_down_body_entered"]
+[connection signal="body_exited" from="Icon_Area_Down" to="." method="_on_icon_area_down_body_exited"]

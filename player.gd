@@ -37,6 +37,7 @@ func _handleMovement(delta):
 		elif direction > 0:
 			sprite_player_body.set_flip_h(false)
 			staff_light.position.x = 20
+	else: velocity.x = 0
 
 func _handleClimbing(delta):
 	var climb_direction = 0
