@@ -1,5 +1,7 @@
-Node
 Node2D
+CollisionShape2D
+Area2D
+Node
 PointLight2D
 LightOccluder2D
 Sprite2D
@@ -10,7 +12,6 @@ OmniLight3D
 ParallaxBackground
 ParallaxLayer
 CollisionPolygon2D
-CollisionShape2D
 Camera2D
 CharacterBody2D
 TileMap

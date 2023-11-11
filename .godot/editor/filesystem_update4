@@ -3,3 +3,10 @@ res://tilesets/wiz_school.tres
 res://main.tscn
 res://scenes/maps/wiz_school.tscn
 res://player.tscn
+res://autoload/signal_bus.tscn
+res://autoload/signal_bus.gd
+res://trigger/ladder_trigger.tscn
+res://scripts/ladder_trigger.gd
+res://triggers/ladder_trigger.tscn
+res://autoload/globals.gd
+res://player.gd
