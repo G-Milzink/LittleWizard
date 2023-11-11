@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbyra74kb478x"]
+
+[ext_resource type="Script" path="res://autoload/globals.gd" id="1_xvy7o"]
+
+[node name="Globals" type="Node"]
+script = ExtResource("1_xvy7o")
+player_jump_velocity = -300

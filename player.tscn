@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://r848tilxesxf"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_j62bo"]
+[ext_resource type="Texture2D" uid="uid://csnan8uhxyyjh" path="res://0_PNG/player/Player.png" id="2_vakqu"]
+[ext_resource type="Texture2D" uid="uid://dwki2w7n64dgx" path="res://0_PNG/player/Player_n.png" id="3_rbnkv"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3l8f3"]
+diffuse_texture = ExtResource("2_vakqu")
+normal_texture = ExtResource("3_rbnkv")
+
+[sub_resource type="Gradient" id="Gradient_74xmv"]
+colors = PackedColorArray(1, 0.584314, 0.317647, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jg5ik"]
+gradient = SubResource("Gradient_74xmv")
+fill = 1
+fill_from = Vector2(0.5, 0.504587)
+fill_to = Vector2(0.876147, 0.844037)
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(512, 288)
+script = ExtResource("1_j62bo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(20, 32, -10, 32, -14.851, 25.8886, -18, 15.4915, -20, 1, -23, -12, -16, -20, -6, -24, 2, -24, 19, -27, 22, -22, 22, 7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_3l8f3")
+
+[node name="StaffLight" type="Node2D" parent="."]
+position = Vector2(20, -31)
+
+[node name="SL_orange" type="PointLight2D" parent="StaffLight"]
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_jg5ik")
