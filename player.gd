@@ -21,8 +21,9 @@ func _addGravity(delta):
 		velocity.y += gravity * delta
 
 func _handleJump(delta):
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = _Globals.player_jump_velocity
+	if !_Globals.can_climb:
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = _Globals.player_jump_velocity
 
 func _handleMovement(delta):
 	var direction = Input.get_axis("move_left", "move_right")
