@@ -10,3 +10,5 @@ res://textures/Cursor_orange.tres
 res://scripts/cursor.gd
 res://scenes/cursor.tscn
 res://textures/cursor_light_orange.tres
+res://textures/npcs/Fargnel.tres
+res://scenes/npcs/fargnel.tscn

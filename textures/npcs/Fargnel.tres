@@ -1,0 +1,8 @@
+[gd_resource type="CanvasTexture" load_steps=3 format=3 uid="uid://d22tiwl8iamwk"]
+
+[ext_resource type="Texture2D" uid="uid://cps8wfx3u5ppn" path="res://0_PNG/npcs/Fargnel.png" id="1_p3nk3"]
+[ext_resource type="Texture2D" uid="uid://hieqiery8oo1" path="res://0_PNG/npcs/Fargnel_n.png" id="2_mnmic"]
+
+[resource]
+diffuse_texture = ExtResource("1_p3nk3")
+normal_texture = ExtResource("2_mnmic")
