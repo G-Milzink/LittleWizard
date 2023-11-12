@@ -4,14 +4,16 @@ extends CharacterBody2D
 @onready var speech_bubble = $Speech_bubble
 @onready var idle_timer = $Idle_timer
 
+const TILESIZE = 64
+
 func _ready():
 	speech_bubble.visible = false
 
 func _process(delta):
 	self.set_collision_layer_value(1, !_Globals.Fargnel_player_can_pass)
-	if _Globals.player_position.x > position.x + 32: #tile size = 64px
+	if _Globals.player_position.x > position.x + TILESIZE/2:
 		character.set_flip_h(true)
-	elif _Globals.player_position.x < position.x - 32: #tile size = 64px
+	elif _Globals.player_position.x < position.x - TILESIZE/2:
 		character.set_flip_h(false)
 
 func _on_range_body_entered(body):
@@ -28,6 +30,5 @@ func _on_idle_timer_timeout():
 func _on_character_animation_finished():
 	character.play("idle")
 	var rnd = randf_range(0.25, 10.0)
-	print(rnd)
 	idle_timer.start(rnd)
 	
