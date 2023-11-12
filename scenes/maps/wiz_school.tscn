@@ -5,12 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://duigyvw4tnr5m" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_BG.png" id="2_uqqat"]
 [ext_resource type="Texture2D" uid="uid://twxhqhrqm441" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_MG.png" id="3_kltpf"]
 [ext_resource type="PackedScene" uid="uid://vhsfbl3wy3qj" path="res://scenes/lights/torch_double.tscn" id="3_n2jkh"]
-[ext_resource type="PackedScene" uid="uid://div1mvca40imv" path="res://player_camera.tscn" id="4_c2y1e"]
 [ext_resource type="Texture2D" uid="uid://cjwbib5u7v05y" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_WalkWay.png" id="4_gtj3k"]
 [ext_resource type="Texture2D" uid="uid://b5b4yfyf4pw6r" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_MG_painting_01.png" id="6_uk65u"]
 [ext_resource type="PackedScene" uid="uid://ct4e7prkjsq5v" path="res://triggers/ladder_trigger.tscn" id="7_ig5l7"]
 [ext_resource type="PackedScene" uid="uid://dg10lvyn3jr6" path="res://scenes/npcs/fargnel.tscn" id="9_x1dnl"]
 [ext_resource type="PackedScene" uid="uid://rjtop1lp384i" path="res://scenes/lights/candle.tscn" id="11_erdoc"]
+[ext_resource type="PackedScene" uid="uid://div1mvca40imv" path="res://scenes/player_camera.tscn" id="11_qapq5"]
 
 [node name="WizSchool" type="Node2D"]
 script = ExtResource("1_t5qb0")
@@ -173,8 +173,6 @@ motion_mirroring = Vector2(1024, 0)
 texture = ExtResource("6_uk65u")
 centered = false
 
-[node name="Camera" parent="." instance=ExtResource("4_c2y1e")]
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.670588, 0.670588, 0.670588, 1)
 
@@ -262,3 +260,5 @@ DOWN_area_y_offset = -64
 
 [node name="Fargnel" parent="Npcs" instance=ExtResource("9_x1dnl")]
 position = Vector2(609, 640)
+
+[node name="Camera" parent="." instance=ExtResource("11_qapq5")]

@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn20awjyy813y"]
+[gd_scene load_steps=4 format=3 uid="uid://cn20awjyy813y"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_2h4tx"]
 [ext_resource type="PackedScene" uid="uid://dw1abxhfsymj5" path="res://scenes/maps/wiz_school.tscn" id="1_gpo2h"]
+[ext_resource type="PackedScene" uid="uid://r848tilxesxf" path="res://scenes/player.tscn" id="3_gf6f0"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_2h4tx")
 
 [node name="WizSchool" parent="." instance=ExtResource("1_gpo2h")]
+
+[node name="Player" parent="." instance=ExtResource("3_gf6f0")]
+position = Vector2(-655, -672)

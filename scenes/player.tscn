@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://r848tilxesxf"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_j62bo"]
-[ext_resource type="Texture2D" uid="uid://csnan8uhxyyjh" path="res://0_PNG/player/Player.png" id="2_vakqu"]
-[ext_resource type="Texture2D" uid="uid://dwki2w7n64dgx" path="res://0_PNG/player/Player_n.png" id="3_rbnkv"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_pl23f"]
+[ext_resource type="Texture2D" uid="uid://csnan8uhxyyjh" path="res://0_PNG/player/Player.png" id="1_ryitc"]
+[ext_resource type="Texture2D" uid="uid://dwki2w7n64dgx" path="res://0_PNG/player/Player_n.png" id="2_t0i2i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p77bh"]
 size = Vector2(26, 55)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3l8f3"]
-diffuse_texture = ExtResource("2_vakqu")
-normal_texture = ExtResource("3_rbnkv")
+diffuse_texture = ExtResource("1_ryitc")
+normal_texture = ExtResource("2_t0i2i")
 
 [sub_resource type="Gradient" id="Gradient_74xmv"]
 colors = PackedColorArray(1, 0.584314, 0.317647, 1, 0, 0, 0, 1)
@@ -24,7 +24,7 @@ fill_to = Vector2(0.876147, 0.844037)
 texture_filter = 1
 position = Vector2(512, 288)
 collision_layer = 7
-script = ExtResource("1_j62bo")
+script = ExtResource("1_pl23f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)

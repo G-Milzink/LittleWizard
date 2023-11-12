@@ -1,8 +1,7 @@
 extends Node2D
 
 @export var lerp_speed = 40
-
-@onready var player = $"../../../Player"
+@onready var player = $"../../Player"
 
 
 
