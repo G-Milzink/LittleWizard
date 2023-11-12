@@ -8,3 +8,9 @@ res://tilesets/wiz_school.tres
 res://textures/npcs/Fargnel.tres
 res://textures/Cursor_orange.tres
 res://textures/cursor_light_orange.tres
+res://autoload/signal_bus.tscn
+res://autoload/globals.tscn
+res://main.tscn
+res://scripts/utils/light_flicker.gd
+res://scenes/lights/torch_double.tscn
+res://scenes/lights/candle.tscn

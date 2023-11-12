@@ -4,23 +4,13 @@
 [ext_resource type="Script" path="res://scripts/wiz_school.gd" id="1_t5qb0"]
 [ext_resource type="Texture2D" uid="uid://duigyvw4tnr5m" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_BG.png" id="2_uqqat"]
 [ext_resource type="Texture2D" uid="uid://twxhqhrqm441" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_MG.png" id="3_kltpf"]
+[ext_resource type="PackedScene" uid="uid://vhsfbl3wy3qj" path="res://scenes/lights/torch_double.tscn" id="3_n2jkh"]
 [ext_resource type="PackedScene" uid="uid://div1mvca40imv" path="res://player_camera.tscn" id="4_c2y1e"]
 [ext_resource type="Texture2D" uid="uid://cjwbib5u7v05y" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_WalkWay.png" id="4_gtj3k"]
 [ext_resource type="Texture2D" uid="uid://b5b4yfyf4pw6r" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_MG_painting_01.png" id="6_uk65u"]
 [ext_resource type="PackedScene" uid="uid://ct4e7prkjsq5v" path="res://triggers/ladder_trigger.tscn" id="7_ig5l7"]
 [ext_resource type="PackedScene" uid="uid://dg10lvyn3jr6" path="res://scenes/npcs/fargnel.tscn" id="9_x1dnl"]
-
-[sub_resource type="Gradient" id="Gradient_ywcu8"]
-offsets = PackedFloat32Array(0, 0.0746753, 0.558442, 0.902597)
-colors = PackedColorArray(1, 0.694118, 0, 1, 0.722834, 0.521574, 0.218268, 1, 0.401674, 0.289835, 0.12129, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_7v8kv"]
-gradient = SubResource("Gradient_ywcu8")
-width = 128
-height = 128
-fill = 1
-fill_from = Vector2(0.513761, 0.495413)
-fill_to = Vector2(0.844037, 0.137615)
+[ext_resource type="PackedScene" uid="uid://rjtop1lp384i" path="res://scenes/lights/candle.tscn" id="11_erdoc"]
 
 [node name="WizSchool" type="Node2D"]
 script = ExtResource("1_t5qb0")
@@ -36,252 +26,80 @@ rotation = -0.966912
 energy = 0.5
 shadow_enabled = true
 
-[node name="PointLight2D" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-670, 259)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-1377, 526)
 
-[node name="PointLight2D24" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-1503, -89)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double2" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-1119, 526)
 
-[node name="PointLight2D25" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-928, -88)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double3" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-864, 526)
 
-[node name="PointLight2D4" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(665, -154)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double4" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-608, 526)
 
-[node name="PointLight2D14" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(1054, -157)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double5" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-673, 212)
 
-[node name="PointLight2D19" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(669.29, -473.71)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double6" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-415, 212)
 
-[node name="PointLight2D20" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(1058.29, -476.71)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double7" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-160, 212)
 
-[node name="PointLight2D21" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(669.29, -788.71)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double8" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-930, -110)
 
-[node name="PointLight2D22" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(1058.29, -791.71)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double9" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-672, -110)
 
-[node name="PointLight2D2" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-416, 262)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double10" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-352, -110)
 
-[node name="PointLight2D3" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-161, 259)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double11" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-96, -110)
 
-[node name="PointLight2D8" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-674, -93)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double12" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(672, -175)
 
-[node name="PointLight2D9" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-351.71, -91.71)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double13" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(1056, -175)
 
-[node name="PointLight2D10" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-94, -95)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double14" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-671, -427)
 
-[node name="PointLight2D11" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-673, -412)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double15" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-351, -427)
 
-[node name="PointLight2D12" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-350, -415)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double16" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-95, -427)
 
-[node name="PointLight2D13" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-97, -416)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double17" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(672, -500)
 
-[node name="PointLight2D16" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-97, -738)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double18" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(1056, -500)
 
-[node name="PointLight2D17" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-353, -741)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double19" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-1504, -116)
 
-[node name="PointLight2D18" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-668, -737)
-scale = Vector2(0.379877, 0.379877)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double20" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-671, -759)
 
-[node name="PointLight2D23" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-553, -693)
-scale = Vector2(0.0634047, 0.0571921)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double21" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-351, -759)
 
-[node name="PointLight2D27" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(983, 263)
-scale = Vector2(0.0634047, 0.0571921)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Torch_double22" parent="Lighting" instance=ExtResource("3_n2jkh")]
+position = Vector2(-95, -759)
 
-[node name="PointLight2D26" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-1066, -54.0001)
-scale = Vector2(0.0634047, 0.0571921)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Candle" parent="Lighting" instance=ExtResource("11_erdoc")]
+position = Vector2(-1065, -57)
 
-[node name="PointLight2D5" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-864, 544)
-scale = Vector2(0.379877, 0.379877)
-color = Color(1, 0.67451, 0.219608, 1)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Candle2" parent="Lighting" instance=ExtResource("11_erdoc")]
+position = Vector2(-553, -700)
 
-[node name="PointLight2D15" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-608, 546)
-scale = Vector2(0.379877, 0.379877)
-color = Color(1, 0.67451, 0.219608, 1)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
-
-[node name="PointLight2D6" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-1121, 546)
-scale = Vector2(0.379877, 0.379877)
-color = Color(1, 0.67451, 0.219608, 1)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
-
-[node name="PointLight2D7" type="PointLight2D" parent="Lighting"]
-texture_filter = 1
-position = Vector2(-1378, 549)
-scale = Vector2(0.379877, 0.379877)
-color = Color(1, 0.67451, 0.219608, 1)
-energy = 1.44
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_7v8kv")
-texture_scale = 10.06
+[node name="Candle3" parent="Lighting" instance=ExtResource("11_erdoc")]
+position = Vector2(983, 260)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -358,7 +176,7 @@ centered = false
 [node name="Camera" parent="." instance=ExtResource("4_c2y1e")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.856067, 0.856067, 0.856067, 1)
+color = Color(0.670588, 0.670588, 0.670588, 1)
 
 [node name="Triggers" type="Node2D" parent="."]
 

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://rjtop1lp384i"]
+
+[ext_resource type="Script" path="res://scripts/utils/light_flicker.gd" id="1_gthkw"]
+
+[sub_resource type="Gradient" id="Gradient_ywcu8"]
+offsets = PackedFloat32Array(0, 0.337662, 0.636364, 0.95671)
+colors = PackedColorArray(1, 0.572549, 0, 1, 0.722834, 0.521574, 0.218268, 1, 0.401674, 0.289835, 0.12129, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1sdil"]
+gradient = SubResource("Gradient_ywcu8")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.513761, 0.495413)
+fill_to = Vector2(0.844037, 0.137615)
+
+[node name="Candle" type="Node2D"]
+
+[node name="PointLight_right" type="PointLight2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.379877, 0.379877)
+energy = 2.25
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_1sdil")
+script = ExtResource("1_gthkw")
+base_intensity = 1.0
+intensity_smoothing = 22.5
+base_scale = 2.0
+scaling_min_offset = -0.05
+scaling_max_offset = 0.05
+scale_smoothing = 12.5

@@ -1,8 +1,8 @@
+Node2D
 Timer
 CollisionShape2D
 Area2D
 AnimatedSprite2D
-Node2D
 CharacterBody2D
 PointLight2D
 Sprite2D
