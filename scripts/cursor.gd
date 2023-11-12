@@ -9,5 +9,4 @@ func _ready():
 
 func _process(delta):
 	var new_position = get_global_mouse_position()
-	print(new_position)
 	position = new_position

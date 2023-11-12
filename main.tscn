@@ -13,6 +13,6 @@ orange_cursor = ExtResource("2_5jywa")
 [node name="World" parent="." instance=ExtResource("1_kwfk0")]
 
 [node name="Player" parent="." instance=ExtResource("2_oel30")]
-position = Vector2(-66, -32)
+position = Vector2(322, 608)
 
 [node name="Cursor" parent="." instance=ExtResource("5_a8wjq")]

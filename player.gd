@@ -7,12 +7,17 @@ extends CharacterBody2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
+
 	_handleClimbing(delta)
 	_handleJump(delta)
 	_addGravity(delta)
 	_handleMovement(delta)
 
 	move_and_slide()
+	_transmitPlayerPosition()
+
+func _transmitPlayerPosition():
+	_Globals.player_position = position
 
 func _addGravity(delta):
 	if !is_on_floor() && !_Globals.is_climbing:
@@ -47,14 +52,12 @@ func _handleClimbing(delta):
 	if _Globals.can_climb_up:
 		if Input.is_action_pressed("jump"):
 			climb_direction = -1
-			print("climbing")
 			_Globals.is_climbing = true
 			self.set_collision_mask_value(1,false)
 	
 	if _Globals.can_climb_down:
 		if Input.is_action_pressed("move_down"):
 			climb_direction = 1
-			print("climbing")
 			_Globals.is_climbing = true
 			self.set_collision_mask_value(1,false)
 	

@@ -1,12 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://dg10lvyn3jr6"]
+[gd_scene load_steps=17 format=3 uid="uid://dg10lvyn3jr6"]
 
 [ext_resource type="Script" path="res://scripts/npcs/fargnel.gd" id="1_pw2rm"]
 [ext_resource type="Texture2D" uid="uid://d22tiwl8iamwk" path="res://textures/npcs/Fargnel.tres" id="1_sgriu"]
 [ext_resource type="Texture2D" uid="uid://ehl7t621h807" path="res://0_PNG/UI/Icons.png" id="2_d0s7t"]
+[ext_resource type="Texture2D" uid="uid://cps8wfx3u5ppn" path="res://0_PNG/npcs/Fargnel.png" id="3_0vlcb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cowoh"]
 atlas = ExtResource("1_sgriu")
 region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xdoo"]
+atlas = ExtResource("3_0vlcb")
+region = Rect2(96, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6hs14"]
 animations = [{
@@ -17,10 +22,21 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xdoo")
+}],
+"loop": false,
+"name": &"idle_blink",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfmat"]
-size = Vector2(38, 96)
+size = Vector2(46, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tccp"]
+size = Vector2(116, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cajw2"]
 atlas = ExtResource("2_d0s7t")
@@ -72,9 +88,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4tccp"]
-size = Vector2(116, 22)
-
 [node name="Fargnel" type="CharacterBody2D"]
 collision_mask = 0
 script = ExtResource("1_pw2rm")
@@ -85,9 +98,17 @@ sprite_frames = SubResource("SpriteFrames_6hs14")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, -48)
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -48)
 shape = SubResource("RectangleShape2D_rfmat")
+
+[node name="Range" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_4tccp")
 
 [node name="Speech_bubble" type="AnimatedSprite2D" parent="."]
 position = Vector2(18, -96)
@@ -95,13 +116,12 @@ sprite_frames = SubResource("SpriteFrames_qocdu")
 autoplay = "default"
 frame_progress = 0.616731
 
-[node name="Range" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
+[node name="Idle_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
-position = Vector2(-6, -11)
-shape = SubResource("RectangleShape2D_4tccp")
-
+[connection signal="animation_finished" from="Character" to="." method="_on_character_animation_finished"]
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
 [connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
+[connection signal="timeout" from="Idle_timer" to="." method="_on_idle_timer_timeout"]

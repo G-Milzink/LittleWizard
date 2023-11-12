@@ -45,7 +45,6 @@ func _on_down_area_body_exited(body):
 func _on_icon_area_up_body_entered(body):
 	up_arrow.visible = true
 	if !animation_player.is_playing():
-		print("up?")
 		animation_player.play("up_arrow_bobbing")
 	
 func _on_icon_area_up_body_exited(body):
