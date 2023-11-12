@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=60 format=3 uid="uid://bfpcft6l7skri"]
 
-[ext_resource type="Texture2D" uid="uid://chjxk7hrwtfm" path="res://0_PNG/tilesets/WizardingSchoo_Walll.png" id="1_5xcdw"]
-[ext_resource type="Texture2D" uid="uid://ltxkepbu0di3" path="res://0_PNG/tilesets/WizardingSchool_ts.png" id="1_n8p5g"]
-[ext_resource type="Texture2D" uid="uid://bwfldkiirddn6" path="res://0_PNG/tilesets/WizardingSchool_assets_front.png" id="2_1ayde"]
-[ext_resource type="Texture2D" uid="uid://x8abf2pids1l" path="res://0_PNG/tilesets/WizardingSchool_assets_back.png" id="3_3pm24"]
+[ext_resource type="Texture2D" uid="uid://chjxk7hrwtfm" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchoo_Walll.png" id="1_5xcdw"]
+[ext_resource type="Texture2D" uid="uid://ltxkepbu0di3" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_ts.png" id="1_n8p5g"]
+[ext_resource type="Texture2D" uid="uid://bwfldkiirddn6" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_front.png" id="2_1ayde"]
+[ext_resource type="Texture2D" uid="uid://x8abf2pids1l" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back.png" id="3_3pm24"]
 [ext_resource type="Texture2D" uid="uid://cjfq4daj7lav8" path="res://0_PNG/interactables/Ladders.png" id="5_8cx22"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fdm2"]

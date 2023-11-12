@@ -11,9 +11,9 @@ func _ready():
 
 func _process(delta):
 	self.set_collision_layer_value(1, !_Globals.Fargnel_player_can_pass)
-	if _Globals.player_position.x > position.x + TILESIZE/2:
+	if _Globals.player_position.x > position.x + TILESIZE * 0.5:
 		character.set_flip_h(true)
-	elif _Globals.player_position.x < position.x - TILESIZE/2:
+	elif _Globals.player_position.x < position.x - TILESIZE * 0.5:
 		character.set_flip_h(false)
 
 func _on_range_body_entered(body):
