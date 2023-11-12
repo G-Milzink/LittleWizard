@@ -1,11 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://35mr2mts3r5d"]
+[gd_scene load_steps=6 format=3 uid="uid://35mr2mts3r5d"]
 
 [ext_resource type="PackedScene" uid="uid://cn20awjyy813y" path="res://scenes/world.tscn" id="1_kwfk0"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ysk1h"]
+[ext_resource type="Texture2D" uid="uid://bk1m6i41rycqs" path="res://textures/Cursor_orange.tres" id="2_5jywa"]
 [ext_resource type="PackedScene" uid="uid://r848tilxesxf" path="res://player.tscn" id="2_oel30"]
+[ext_resource type="PackedScene" uid="uid://w21k2qf8gfuu" path="res://scenes/cursor.tscn" id="5_a8wjq"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_ysk1h")
+orange_cursor = ExtResource("2_5jywa")
 
 [node name="World" parent="." instance=ExtResource("1_kwfk0")]
 
 [node name="Player" parent="." instance=ExtResource("2_oel30")]
 position = Vector2(-66, -32)
+
+[node name="Cursor" parent="." instance=ExtResource("5_a8wjq")]

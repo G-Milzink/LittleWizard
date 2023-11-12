@@ -1,7 +1,12 @@
-res://triggers/ladder_trigger.tscn
-res://tilesets/wiz_school.tres
 res://autoload/signal_bus.tscn
+res://tilesets/wiz_school.tres
 res://autoload/globals.tscn
 res://main.tscn
 res://scenes/maps/wiz_school.tscn
 res://player.tscn
+res://triggers/ladder_trigger.tscn
+res://scripts/main.gd
+res://textures/Cursor_orange.tres
+res://scripts/cursor.gd
+res://scenes/cursor.tscn
+res://textures/cursor_light_orange.tres
