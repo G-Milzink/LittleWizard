@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cilrjju2rckha"
-path="res://.godot/imported/WizardingSchool_assets_back-export.png-aa3fb8ab58e34c106506e0f9073f5df6.ctex"
+uid="uid://b262tis80qqmn"
+path="res://.godot/imported/WizardingSchool_assets_front_s.png-9622b7b42eaea35a3a7ebe028f6bce5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back-export.png"
-dest_files=["res://.godot/imported/WizardingSchool_assets_back-export.png-aa3fb8ab58e34c106506e0f9073f5df6.ctex"]
+source_file="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_front_s.png"
+dest_files=["res://.godot/imported/WizardingSchool_assets_front_s.png-9622b7b42eaea35a3a7ebe028f6bce5d.ctex"]
 
 [params]
 

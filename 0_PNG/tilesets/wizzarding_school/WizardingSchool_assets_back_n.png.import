@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjfq4daj7lav8"
-path="res://.godot/imported/Ladders.png-6c94fdec178ee485e37559a98e898eca.ctex"
+uid="uid://3jjfwunho7cb"
+path="res://.godot/imported/WizardingSchool_assets_back_n.png-3b6ebd721ed8d6e53f0262b7ece3345c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://0_PNG/interactables/Ladders.png"
-dest_files=["res://.godot/imported/Ladders.png-6c94fdec178ee485e37559a98e898eca.ctex"]
+source_file="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back_n.png"
+dest_files=["res://.godot/imported/WizardingSchool_assets_back_n.png-3b6ebd721ed8d6e53f0262b7ece3345c.ctex"]
 
 [params]
 

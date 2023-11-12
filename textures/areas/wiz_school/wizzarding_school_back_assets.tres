@@ -1,0 +1,11 @@
+[gd_resource type="CanvasTexture" load_steps=4 format=3 uid="uid://gwg6jakj1w38"]
+
+[ext_resource type="Texture2D" uid="uid://x8abf2pids1l" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back.png" id="1_fkljd"]
+[ext_resource type="Texture2D" uid="uid://3jjfwunho7cb" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back_n.png" id="2_w7d23"]
+[ext_resource type="Texture2D" uid="uid://dkug6rfxvu1c2" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back_s.png" id="3_g304f"]
+
+[resource]
+diffuse_texture = ExtResource("1_fkljd")
+normal_texture = ExtResource("2_w7d23")
+specular_texture = ExtResource("3_g304f")
+specular_shininess = 0.2

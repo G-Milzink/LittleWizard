@@ -1,0 +1,11 @@
+[gd_resource type="CanvasTexture" load_steps=4 format=3 uid="uid://k757ate1hr65"]
+
+[ext_resource type="Texture2D" uid="uid://cjfq4daj7lav8" path="res://0_PNG/interactables/ladders/Ladders.png" id="1_ewkl0"]
+[ext_resource type="Texture2D" uid="uid://dmk0adqaiqcqr" path="res://0_PNG/interactables/ladders/Ladders_n.png" id="2_dvjl5"]
+[ext_resource type="Texture2D" uid="uid://cbyu7omtsmvc8" path="res://0_PNG/interactables/ladders/Ladders_s.png" id="3_dwobi"]
+
+[resource]
+diffuse_texture = ExtResource("1_ewkl0")
+normal_texture = ExtResource("2_dvjl5")
+specular_texture = ExtResource("3_dwobi")
+specular_shininess = 0.3

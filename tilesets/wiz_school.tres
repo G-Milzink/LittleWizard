@@ -1,14 +1,16 @@
 [gd_resource type="TileSet" load_steps=60 format=3 uid="uid://bfpcft6l7skri"]
 
-[ext_resource type="Texture2D" uid="uid://chjxk7hrwtfm" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchoo_Walll.png" id="1_5xcdw"]
-[ext_resource type="Texture2D" uid="uid://ltxkepbu0di3" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_ts.png" id="1_n8p5g"]
-[ext_resource type="Texture2D" uid="uid://bwfldkiirddn6" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_front.png" id="2_1ayde"]
-[ext_resource type="Texture2D" uid="uid://x8abf2pids1l" path="res://0_PNG/tilesets/wizzarding_school/WizardingSchool_assets_back.png" id="3_3pm24"]
-[ext_resource type="Texture2D" uid="uid://cjfq4daj7lav8" path="res://0_PNG/interactables/Ladders.png" id="5_8cx22"]
+[ext_resource type="Texture2D" uid="uid://vlooot32e68b" path="res://textures/areas/wiz_school/wizzarding_school_wall.tres" id="1_vc1gq"]
+[ext_resource type="Texture2D" uid="uid://g6g5vbgav2c6" path="res://textures/areas/wiz_school/wizzarding_school_front_assets.tres" id="2_mno04"]
+[ext_resource type="Texture2D" uid="uid://gwg6jakj1w38" path="res://textures/areas/wiz_school/wizzarding_school_back_assets.tres" id="3_ljjbr"]
+[ext_resource type="Texture2D" uid="uid://dx3yb60vw3e27" path="res://textures/areas/wiz_school/wizzarding_school_floor.tres" id="4_vt8ql"]
+[ext_resource type="Texture2D" uid="uid://k757ate1hr65" path="res://textures/interactables/ladders.tres" id="5_8fuou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fdm2"]
-texture = ExtResource("1_5xcdw")
+resource_name = "Wall"
+texture = ExtResource("1_vc1gq")
 texture_region_size = Vector2i(64, 64)
+use_texture_padding = false
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 1
@@ -322,8 +324,10 @@ texture_region_size = Vector2i(64, 64)
 polygon = PackedVector2Array(-24, 8, -5.33333, 8, -4.92308, 12.3077, -4.92308, 14.7692, -6, 16, -8.5, 16.5, -8.5, 22, -1.5, 22, -2, 26, -6.5, 26, -6.5, 32, 5.5, 32, 4.5, 27.5, 7, 24.5, 4, 23, 6.5, 19.5, 24, 19.5, 30, 24.5, 29, 32, -28, 32, -28.9524, 25.9048, -24, 26.6667, -24, 21.3333, -26.6667, 21.3333, -26.6667, 16, -24, 16, -24, 10.6667, -26.6667, 10.6667, -26.6667, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxd3c"]
-texture = ExtResource("2_1ayde")
+resource_name = "Assets_Front"
+texture = ExtResource("2_mno04")
 texture_region_size = Vector2i(64, 64)
+use_texture_padding = false
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_8he2f")
@@ -375,8 +379,8 @@ texture_region_size = Vector2i(64, 64)
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_74s2i"]
-polygon = PackedVector2Array(-11, -2, -10, -2, -10, -3, -7, -3, -7, -2, -6, -2, -6, -1, -5, -1, -5, 2, -6, 2, -6, 3, -7, 3, -7, 4, -10, 4, -10, 3, -11, 3, -11, 2, -12, 2, -12, -1, -11, -1)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_e0odm"]
+polygon = PackedVector2Array(-16, -2, -16, -3, -13, -3, -13, -2, -12, -2, -12, -1, -11, -1, -11, 2, -12, 2, -12, 3, -13, 3, -13, 4, -16, 4, -16, 3, -17, 3, -17, 2, -18, 2, -18, -1, -17, -1, -17, -2)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_78sr1"]
 
@@ -387,8 +391,10 @@ polygon = PackedVector2Array(-12, -28, -8, -28, -6, -26, -6, -22, -8.5, -20, -12
 polygon = PackedVector2Array(8, -28, 12, -28, 14, -26, 14, -22.5, 12, -20, 7.5, -20, 6, -22.5, 6, -26)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ctkuh"]
-texture = ExtResource("3_3pm24")
+resource_name = "Assets_Back"
+texture = ExtResource("3_ljjbr")
 texture_region_size = Vector2i(64, 64)
+use_texture_padding = false
 0:0/0 = 0
 0:0/0/modulate = Color(0.72549, 0.72549, 0.72549, 1)
 0:0/0/terrain_set = 0
@@ -417,7 +423,7 @@ texture_region_size = Vector2i(64, 64)
 0:1/0/modulate = Color(0.72549, 0.72549, 0.72549, 1)
 0:1/0/terrain_set = 0
 0:1/0/terrain = 4
-0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_74s2i")
+0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_e0odm")
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/terrains_peering_bit/top_side = 4
@@ -660,8 +666,10 @@ polygon = PackedVector2Array(28, -32, 28, 32, -28, 32, -32, 28, -32, -32)
 polygon = PackedVector2Array(32, -32, 32, 28, -32, 28, -32, -32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hu7pw"]
-texture = ExtResource("1_n8p5g")
+resource_name = "Floor"
+texture = ExtResource("4_vt8ql")
 texture_region_size = Vector2i(64, 64)
+use_texture_padding = false
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -1278,8 +1286,10 @@ texture_region_size = Vector2i(64, 64)
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -32, 32, -32, 32, 32, 8, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xbyl"]
-texture = ExtResource("5_8cx22")
+resource_name = "Ladders"
+texture = ExtResource("5_8fuou")
 texture_region_size = Vector2i(64, 64)
+use_texture_padding = false
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 5
