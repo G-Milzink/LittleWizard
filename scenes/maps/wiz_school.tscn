@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dw1abxhfsymj5"]
+[gd_scene load_steps=13 format=3 uid="uid://dw1abxhfsymj5"]
 
 [ext_resource type="TileSet" uid="uid://bfpcft6l7skri" path="res://tilesets/wiz_school.tres" id="1_psll3"]
 [ext_resource type="Script" path="res://scripts/wiz_school.gd" id="1_t5qb0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ct4e7prkjsq5v" path="res://triggers/ladder_trigger.tscn" id="7_ig5l7"]
 [ext_resource type="PackedScene" uid="uid://dg10lvyn3jr6" path="res://scenes/npcs/fargnel.tscn" id="9_x1dnl"]
 [ext_resource type="PackedScene" uid="uid://rjtop1lp384i" path="res://scenes/lights/candle.tscn" id="11_erdoc"]
+[ext_resource type="Script" path="res://scripts/transitions/WizSchool_to_EnchForest.gd" id="11_ni0r5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5md1"]
 size = Vector2(24, 132)
@@ -260,13 +261,25 @@ DOWN_area_y_offset = -64
 position = Vector2(609, 640)
 
 [node name="Transitions" type="Node2D" parent="."]
-position = Vector2(1091, 625)
 
-[node name="To_EnchForest" type="Node2D" parent="Transitions"]
-position = Vector2(45, 15)
+[node name="WizSchool_to_EnchForest" type="Node2D" parent="Transitions"]
+position = Vector2(1136, 640)
+script = ExtResource("11_ni0r5")
 
-[node name="Area2D" type="Area2D" parent="Transitions/To_EnchForest"]
+[node name="Area2D" type="Area2D" parent="Transitions/WizSchool_to_EnchForest"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/To_EnchForest/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/WizSchool_to_EnchForest/Area2D"]
 position = Vector2(0, -66)
 shape = SubResource("RectangleShape2D_s5md1")
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="GameStart" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(-1465, 256)
+gizmo_extents = 50.0
+
+[node name="From_EnchForest" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(1047, 640)
+gizmo_extents = 50.0
+
+[connection signal="body_entered" from="Transitions/WizSchool_to_EnchForest/Area2D" to="Transitions/WizSchool_to_EnchForest" method="_on_area_2d_body_entered"]

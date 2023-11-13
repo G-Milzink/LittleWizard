@@ -4,7 +4,12 @@ extends CharacterBody2D
 @onready var staff_light = $StaffLight
 
 
+
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready():
+	position = _Globals.START_LOCATION
+
 
 func _physics_process(delta):
 

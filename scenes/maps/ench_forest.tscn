@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://1ylybhydarey"]
+[gd_scene load_steps=5 format=3 uid="uid://1ylybhydarey"]
 
 [ext_resource type="Script" path="res://scripts/ench_forest.gd" id="1_oaawi"]
 [ext_resource type="TileSet" uid="uid://cyjy5himrfuh8" path="res://tilesets/ench_forest.tres" id="2_ibnxf"]
+[ext_resource type="Script" path="res://scripts/transitions/EnchForest_to_WizSchool.gd" id="3_thbne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r887s"]
+size = Vector2(24, 132)
 
 [node name="EnchForest" type="Node2D"]
 script = ExtResource("1_oaawi")
@@ -16,3 +20,17 @@ layer_0/tile_data = PackedInt32Array(655360, 262144, 3, 655361, 262144, 5, 65536
 
 [node name="From_WizSchool" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(-528, 644)
+
+[node name="Transitions" type="Node2D" parent="."]
+
+[node name="EnchForest_to_WizSchool" type="Node2D" parent="Transitions"]
+position = Vector2(-632, 643)
+script = ExtResource("3_thbne")
+
+[node name="Area2D" type="Area2D" parent="Transitions/EnchForest_to_WizSchool"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/EnchForest_to_WizSchool/Area2D"]
+position = Vector2(0, -66)
+shape = SubResource("RectangleShape2D_r887s")
+
+[connection signal="body_entered" from="Transitions/EnchForest_to_WizSchool/Area2D" to="Transitions/EnchForest_to_WizSchool" method="_on_area_2d_body_entered"]

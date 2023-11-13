@@ -19,3 +19,10 @@ res://scripts/player_camera.gd
 res://scripts/wiz_school.gd
 res://tilesets/ench_forest.tres
 res://scripts/world.gd
+res://scripts/player.gd
+res://scripts/utils/GameStartLocation.gd
+res://autoload/globals.gd
+res://scenes/cursor.tscn
+res://scripts/transitions/WizSchool_to_EnchForest.gd
+res://autoload/signal_bus.gd
+res://scripts/transitions/EnchForest_to_WizSchool.gd

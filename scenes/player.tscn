@@ -31,6 +31,7 @@ position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_p77bh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 texture = SubResource("CanvasTexture_3l8f3")
 
 [node name="StaffLight" type="Node2D" parent="."]

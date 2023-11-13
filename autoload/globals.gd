@@ -1,5 +1,8 @@
 extends Node
 
+const TILE_SIZE = 64
+const START_LOCATION = Vector2(-1456,256 - TILE_SIZE*0.5)
+
 # PLayer:
 @export_category("PlayerMovement Paramters")
 @export var player_move_speed = 200
@@ -12,6 +15,7 @@ var can_climb_up = false
 var can_climb_down = false
 var is_climbing = false
 
+
 var player_position = Vector2.ZERO
 
 # Master Fargnel:
@@ -19,3 +23,6 @@ var player_position = Vector2.ZERO
 
 @export var Fargnel_is_active = true
 @export var Fargnel_player_can_pass = false
+
+@export_category("Game Params:")
+@export var start_location = Vector2.ZERO
