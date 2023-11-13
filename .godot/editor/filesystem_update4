@@ -1,4 +1,4 @@
-res://main.tscn
+res://autoload/signal_bus.tscn
 res://textures/areas/wiz_school/wizzarding_school_wall.tres
 res://textures/areas/wiz_school/wizzarding_school_front_assets.tres
 res://textures/areas/wiz_school/wizzarding_school_back_assets.tres
@@ -8,11 +8,14 @@ res://tilesets/wiz_school.tres
 res://textures/npcs/Fargnel.tres
 res://textures/Cursor_orange.tres
 res://textures/cursor_light_orange.tres
-res://scenes/world.tscn
-res://scenes/player.tscn
-res://autoload/signal_bus.tscn
+res://tilesets/enchanted_forest.tres
 res://autoload/globals.tscn
-res://player_camera.gd
+res://main.tscn
+res://scenes/world.tscn
 res://scenes/maps/wiz_school.tscn
+res://scenes/maps/enchanted_forest.tscn
 res://scripts/player_camera.gd
+res://scripts/maps/wiz_school.gd
+res://scripts/maps/ench_forest.gd
 res://scenes/player_camera.tscn
+res://scenes/maps/ench_forest.tscn
