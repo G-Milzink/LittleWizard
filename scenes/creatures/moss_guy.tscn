@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpkhp0eynbfj1"]
+
+[ext_resource type="Script" path="res://scripts/creatures/moss_guy.gd" id="1_an01y"]
+
+[sub_resource type="Gradient" id="Gradient_okly4"]
+offsets = PackedFloat32Array(0.909804, 1)
+colors = PackedColorArray(0, 0.299281, 1.44392e-07, 1, 0.215686, 0.458824, 0.0431373, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fm12m"]
+gradient = SubResource("Gradient_okly4")
+fill = 1
+fill_from = Vector2(0.490826, 0.522936)
+fill_to = Vector2(0.486239, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_aayug"]
+diffuse_texture = SubResource("GradientTexture2D_fm12m")
+
+[node name="MossGuy" type="CharacterBody2D"]
+script = ExtResource("1_an01y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, 31, -31, 0, -24, -17, -14, -25, 0, -28, 12, -25, 24, -17, 29, 0, 29, 31)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("CanvasTexture_aayug")
+
+[node name="FlightTrigger" type="Area2D" parent="."]
+position = Vector2(0, 31)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FlightTrigger"]
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(-128, 0, 0.336761, 0, 128, 0, 124, -31, 111, -61, 91, -88, 63, -108, 33, -121, 0, -125, -33, -121, -64, -108, -90, -88, -111, -61, -123, -29)
+
+[node name="SafetyBuffer" type="Area2D" parent="."]
+position = Vector2(0, 31)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SafetyBuffer"]
+scale = Vector2(1.5, 0.75)
+polygon = PackedVector2Array(-128, 0, 0.336761, 0, 128, 0, 124, -31, 111, -61, 91, -88, 63, -108, 33, -121, 0, -125, -33, -121, -64, -108, -90, -88, -111, -61, -123, -29)
+
+[connection signal="body_entered" from="FlightTrigger" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="SafetyBuffer" to="." method="_on_safety_buffer_body_exited"]

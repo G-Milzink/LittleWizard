@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var left_camera_limit = -100000
+@export var left_camera_limit = -755
 @export var top_camera_limit = -100000
 @export var right_camera_limit = 100000
 @export var bottom_camera_limit = 700

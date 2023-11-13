@@ -1,3 +1,5 @@
+res://scripts/creatures
+res://scenes/creatures
 res://scripts/transitions
 res://scripts/utils
 res://0_PNG/tilesets
@@ -18,5 +20,3 @@ res://scenes
 res://triggers
 res://autoload
 res://Autoload
-res://0_PNG/player
-res://
