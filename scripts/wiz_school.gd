@@ -5,7 +5,7 @@ extends Node2D
 @export var right_camera_limit = 0
 @export var bottom_camera_limit = 0
 
-@onready var camera = $Camera/Camera2D
+@onready var camera = $"../Camera/Camera2D"
 
 func _ready():
 	camera.set_limit(SIDE_LEFT, left_camera_limit)

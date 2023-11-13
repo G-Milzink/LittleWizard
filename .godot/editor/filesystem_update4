@@ -15,3 +15,5 @@ res://scenes/player.tscn
 res://scenes/maps/wiz_school.tscn
 res://scenes/maps/ench_forest.tscn
 res://scripts/ench_forest.gd
+res://scripts/player_camera.gd
+res://scripts/wiz_school.gd

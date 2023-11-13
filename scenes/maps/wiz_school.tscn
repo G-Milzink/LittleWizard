@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dw1abxhfsymj5"]
+[gd_scene load_steps=11 format=3 uid="uid://dw1abxhfsymj5"]
 
 [ext_resource type="TileSet" uid="uid://bfpcft6l7skri" path="res://tilesets/wiz_school.tres" id="1_psll3"]
 [ext_resource type="Script" path="res://scripts/wiz_school.gd" id="1_t5qb0"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://ct4e7prkjsq5v" path="res://triggers/ladder_trigger.tscn" id="7_ig5l7"]
 [ext_resource type="PackedScene" uid="uid://dg10lvyn3jr6" path="res://scenes/npcs/fargnel.tscn" id="9_x1dnl"]
 [ext_resource type="PackedScene" uid="uid://rjtop1lp384i" path="res://scenes/lights/candle.tscn" id="11_erdoc"]
-[ext_resource type="PackedScene" uid="uid://div1mvca40imv" path="res://scenes/player_camera.tscn" id="11_qapq5"]
 
 [node name="WizSchool" type="Node2D"]
 script = ExtResource("1_t5qb0")
@@ -260,5 +259,3 @@ DOWN_area_y_offset = -64
 
 [node name="Fargnel" parent="Npcs" instance=ExtResource("9_x1dnl")]
 position = Vector2(609, 640)
-
-[node name="Camera" parent="." instance=ExtResource("11_qapq5")]
