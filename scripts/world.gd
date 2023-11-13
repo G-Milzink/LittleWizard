@@ -15,10 +15,10 @@ func _ready():
 
 func _Transition_WizSchool2EnchForest():
 	var instance = map_ench_forest.instantiate()
-	add_child(instance)
+	call_deferred("add_child", instance)
 	player.position = Vector2(-528,644-_Globals.TILE_SIZE*.5)
 
 func _Transition_EnchForest2WizSchool():
 	var instance = map_wiz_school.instantiate()
-	add_child(instance)
+	call_deferred("add_child", instance)
 	player.position = Vector2(1047,640-_Globals.TILE_SIZE*.5)
