@@ -1,5 +1,7 @@
 extends Node2D
 
+var map_wiz_school = preload("res://scenes/maps/wiz_school.tscn")
+var map_ench_forest = preload("res://scenes/maps/ench_forest.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

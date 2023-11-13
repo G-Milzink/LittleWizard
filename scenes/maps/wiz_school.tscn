@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dw1abxhfsymj5"]
+[gd_scene load_steps=12 format=3 uid="uid://dw1abxhfsymj5"]
 
 [ext_resource type="TileSet" uid="uid://bfpcft6l7skri" path="res://tilesets/wiz_school.tres" id="1_psll3"]
 [ext_resource type="Script" path="res://scripts/wiz_school.gd" id="1_t5qb0"]
@@ -11,12 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://dg10lvyn3jr6" path="res://scenes/npcs/fargnel.tscn" id="9_x1dnl"]
 [ext_resource type="PackedScene" uid="uid://rjtop1lp384i" path="res://scenes/lights/candle.tscn" id="11_erdoc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5md1"]
+size = Vector2(24, 132)
+
 [node name="WizSchool" type="Node2D"]
 script = ExtResource("1_t5qb0")
-left_camera_limit = -1660
-top_camera_limit = -3520
-right_camera_limit = 1148
-bottom_camera_limit = 700
 
 [node name="Lighting" type="Node2D" parent="."]
 
@@ -259,3 +258,15 @@ DOWN_area_y_offset = -64
 
 [node name="Fargnel" parent="Npcs" instance=ExtResource("9_x1dnl")]
 position = Vector2(609, 640)
+
+[node name="Transitions" type="Node2D" parent="."]
+position = Vector2(1091, 625)
+
+[node name="To_EnchForest" type="Node2D" parent="Transitions"]
+position = Vector2(45, 15)
+
+[node name="Area2D" type="Area2D" parent="Transitions/To_EnchForest"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/To_EnchForest/Area2D"]
+position = Vector2(0, -66)
+shape = SubResource("RectangleShape2D_s5md1")

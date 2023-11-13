@@ -17,3 +17,5 @@ res://scenes/maps/ench_forest.tscn
 res://scripts/ench_forest.gd
 res://scripts/player_camera.gd
 res://scripts/wiz_school.gd
+res://tilesets/ench_forest.tres
+res://scripts/world.gd

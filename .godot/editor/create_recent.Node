@@ -1,13 +1,15 @@
-Node2D
-Timer
 CollisionShape2D
 Area2D
+Node2D
+Marker2D
+Node
+TileMap
+Timer
 AnimatedSprite2D
 CharacterBody2D
 PointLight2D
 Sprite2D
 AnimationPlayer
-Node
 LightOccluder2D
 DirectionalLight2D
 CanvasModulate
@@ -16,4 +18,3 @@ ParallaxBackground
 ParallaxLayer
 CollisionPolygon2D
 Camera2D
-TileMap

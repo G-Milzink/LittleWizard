@@ -1,3 +1,5 @@
+res://0_PNG/tilesets
+res://tilesets
 res://scripts
 res://scenes/maps
 res://scenes/lights
@@ -17,4 +19,3 @@ res://autoload
 res://Autoload
 res://0_PNG/player
 res://
-res://tilesets
