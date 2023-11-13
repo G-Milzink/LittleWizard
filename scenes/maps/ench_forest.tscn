@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://1ylybhydarey"]
+
+[ext_resource type="Script" path="res://scripts/ench_forest.gd" id="1_oaawi"]
+[ext_resource type="PackedScene" uid="uid://div1mvca40imv" path="res://scenes/player_camera.tscn" id="2_qf276"]
+
+[node name="EnchForest" type="Node2D"]
+script = ExtResource("1_oaawi")
+
+[node name="Camera" parent="." instance=ExtResource("2_qf276")]
