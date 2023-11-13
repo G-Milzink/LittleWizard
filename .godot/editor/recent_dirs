@@ -1,6 +1,3 @@
-res://0_PNG/tilesets
-res://scenes/maps
-res://tilesets
 res://scripts
 res://scenes/lights
 res://scripts/utils
@@ -19,3 +16,5 @@ res://autoload
 res://Autoload
 res://0_PNG/player
 res://
+res://tilesets
+res://scenes/maps

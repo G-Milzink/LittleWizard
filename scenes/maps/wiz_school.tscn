@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dw1abxhfsymj5"]
 
-[ext_resource type="Script" path="res://scripts/maps/wiz_school.gd" id="1_2l55t"]
 [ext_resource type="TileSet" uid="uid://bfpcft6l7skri" path="res://tilesets/wiz_school.tres" id="1_psll3"]
+[ext_resource type="Script" path="res://scripts/wiz_school.gd" id="1_t5qb0"]
 [ext_resource type="Texture2D" uid="uid://duigyvw4tnr5m" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_BG.png" id="2_uqqat"]
 [ext_resource type="Texture2D" uid="uid://twxhqhrqm441" path="res://0_PNG/paralax/WizardingSchool/Wiz_School_MG.png" id="3_kltpf"]
 [ext_resource type="PackedScene" uid="uid://vhsfbl3wy3qj" path="res://scenes/lights/torch_double.tscn" id="3_n2jkh"]
@@ -13,7 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://div1mvca40imv" path="res://scenes/player_camera.tscn" id="11_qapq5"]
 
 [node name="WizSchool" type="Node2D"]
-script = ExtResource("1_2l55t")
+script = ExtResource("1_t5qb0")
+left_camera_limit = -1660
+top_camera_limit = -3520
+right_camera_limit = 1148
+bottom_camera_limit = 700
 
 [node name="Lighting" type="Node2D" parent="."]
 
@@ -172,9 +176,6 @@ centered = false
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.670588, 0.670588, 0.670588, 1)
 
-[node name="Camera" parent="." instance=ExtResource("11_qapq5")]
-position = Vector2(346, 612)
-
 [node name="Triggers" type="Node2D" parent="."]
 
 [node name="LadderTrigger" parent="Triggers" instance=ExtResource("7_ig5l7")]
@@ -259,3 +260,5 @@ DOWN_area_y_offset = -64
 
 [node name="Fargnel" parent="Npcs" instance=ExtResource("9_x1dnl")]
 position = Vector2(609, 640)
+
+[node name="Camera" parent="." instance=ExtResource("11_qapq5")]
