@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://35mr2mts3r5d"]
+[gd_scene load_steps=6 format=3 uid="uid://35mr2mts3r5d"]
 
 [ext_resource type="PackedScene" uid="uid://cn20awjyy813y" path="res://scenes/world.tscn" id="1_kwfk0"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ysk1h"]
 [ext_resource type="Texture2D" uid="uid://bk1m6i41rycqs" path="res://textures/Cursor_orange.tres" id="2_5jywa"]
 [ext_resource type="PackedScene" uid="uid://w21k2qf8gfuu" path="res://scenes/cursor.tscn" id="5_a8wjq"]
+[ext_resource type="PackedScene" uid="uid://bflmx0mo48ef7" path="res://scenes/music_player.tscn" id="5_fjtg7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ysk1h")
@@ -12,3 +13,5 @@ orange_cursor = ExtResource("2_5jywa")
 [node name="World" parent="." instance=ExtResource("1_kwfk0")]
 
 [node name="Cursor" parent="." instance=ExtResource("5_a8wjq")]
+
+[node name="MusicPlayer" parent="." instance=ExtResource("5_fjtg7")]

@@ -24,3 +24,4 @@ res://scenes/player.tscn
 res://scripts/player.gd
 res://scenes/music_player.tscn
 res://scripts/utils/music_player.gd
+res://main.tscn

@@ -21,8 +21,8 @@ func _physics_process(delta):
 
 
 	move_and_slide()
-	
 	_transmitPlayerPosition()
+
 
 func _transmitPlayerPosition():
 	_Globals.player_position = position
