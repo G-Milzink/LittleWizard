@@ -22,3 +22,5 @@ res://shaders/hold_outline.gdshader
 res://scripts/world.gd
 res://scenes/player.tscn
 res://scripts/player.gd
+res://scenes/music_player.tscn
+res://scripts/utils/music_player.gd

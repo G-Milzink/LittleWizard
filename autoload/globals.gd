@@ -20,6 +20,7 @@ var can_climb_down = false
 var is_climbing = false
 var is_repelled = false
 
+var current_map
 var player_position = Vector2.ZERO
 
 # Master Fargnel:
@@ -28,5 +29,5 @@ var player_position = Vector2.ZERO
 @export var Fargnel_is_active = true
 @export var Fargnel_player_can_pass = false
 
-@export_category("Game Params:")
+@export_category("Dev Settings:")
 @export_enum("Wiz.School", "Ench.Forest") var starting_map

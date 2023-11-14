@@ -1,10 +1,11 @@
+res://scripts/utils
+res://scenes
 res://shaders
 res://textures/creatures
 res://0_PNG/creatures
 res://scripts/creatures
 res://scenes/creatures
 res://scripts/transitions
-res://scripts/utils
 res://0_PNG/tilesets
 res://tilesets
 res://scripts
@@ -19,4 +20,3 @@ res://0_PNG/UI
 res://textures/npcs
 res://scenes/npcs
 res://textures
-res://scenes
