@@ -73,10 +73,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0in0"]
-size = Vector2(56, 42)
+size = Vector2(52, 42)
 
-[node name="MossGuy" type="CharacterBody2D"]
+[node name="MossGuy" type="CharacterBody2D" groups=["clickable"]]
 script = ExtResource("1_an01y")
+moveSpeed = 75.0
+runSpeed = 200
 
 [node name="Character" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2o42e")
@@ -84,7 +86,6 @@ animation = &"running"
 autoplay = "walking"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_o0in0")
 
@@ -106,5 +107,19 @@ position = Vector2(0, 1)
 scale = Vector2(2, 0.75)
 polygon = PackedVector2Array(-128, 0, 0.336761, 0, 128, 0, 124, -31, 111, -61, 91, -88, 63, -108, 33, -121, 0, -125, -33, -121, -64, -108, -90, -88, -111, -61, -123, -29)
 
+[node name="MouseDetection" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseDetection"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_o0in0")
+
+[node name="HoldTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="body_entered" from="FlightTrigger" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="SafetyBuffer" to="." method="_on_safety_buffer_body_exited"]
+[connection signal="body_entered" from="MouseDetection" to="." method="_on_mouse_detection_body_entered"]
+[connection signal="body_exited" from="MouseDetection" to="." method="_on_mouse_detection_body_exited"]
+[connection signal="timeout" from="HoldTimer" to="." method="_on_hold_timer_timeout"]

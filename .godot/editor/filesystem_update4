@@ -12,3 +12,9 @@ res://scenes/world.tscn
 res://scenes/maps/wiz_school.tscn
 res://scenes/maps/ench_forest.tscn
 res://scenes/creatures/moss_guy.tscn
+res://scenes/cursor.tscn
+res://textures/Cursor_orange.tres
+res://textures/cursor_light_orange.tres
+res://scripts/cursor.gd
+res://scripts/creatures/moss_guy.gd
+res://autoload/globals.gd

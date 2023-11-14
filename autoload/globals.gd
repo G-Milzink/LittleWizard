@@ -4,12 +4,15 @@ const TILE_SIZE = 64
 const START_LOCATION = Vector2(-1456,256 - TILE_SIZE*0.5)
 
 # PLayer:
-@export_category("PlayerMovement Paramters")
+@export_category("PlayerMovement")
 @export var player_move_speed = 200
 @export var player_climb_speed = 125
 @export var player_jump_velocity = -350
+@export_category("Spell settings")
+@export var has_spell_Hold = true
+@export var hold_duration = 3.0 #in seconds
 
-var current_spell = ""
+var current_spell = "Hold"
 
 var can_climb_up = false
 var can_climb_down = false
