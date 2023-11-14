@@ -1,10 +1,15 @@
 extends CharacterBody2D
+
+@onready var character = $Character
+
 @export var moveSpeed = 100.0
 @export var runSpeed = 175
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 var direction = 0
 var current_speed = 0
+
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	current_speed = moveSpeed
@@ -25,16 +30,26 @@ func _physics_process(delta):
 		velocity.x = direction * current_speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_speed)
-
+	
+	if direction == 1:
+		character.set_flip_h(true)
+	else:
+		character.set_flip_h(false)
+		
 	move_and_slide()
 
 
 func _on_detection_area_body_entered(body):
 	if body.name == "Player":
-		direction = direction * -1
+		if _Globals.player_position.x < position.x:
+			direction = 1
+		else:
+			direction = -1
 		current_speed = runSpeed
+		character.play("running")
 
 
 func _on_safety_buffer_body_exited(body):
 	if body.name == "Player":
 		current_speed = moveSpeed
+		character.play("walking")

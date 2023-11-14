@@ -1,41 +1,109 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpkhp0eynbfj1"]
+[gd_scene load_steps=13 format=3 uid="uid://cpkhp0eynbfj1"]
 
 [ext_resource type="Script" path="res://scripts/creatures/moss_guy.gd" id="1_an01y"]
+[ext_resource type="Texture2D" uid="uid://2wr3jo4t6yko" path="res://textures/creatures/moss_guy.tres" id="2_1htwi"]
 
-[sub_resource type="Gradient" id="Gradient_okly4"]
-offsets = PackedFloat32Array(0.909804, 1)
-colors = PackedColorArray(0, 0.299281, 1.44392e-07, 1, 0.215686, 0.458824, 0.0431373, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jj08"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_fm12m"]
-gradient = SubResource("Gradient_okly4")
-fill = 1
-fill_from = Vector2(0.490826, 0.522936)
-fill_to = Vector2(0.486239, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6tjt"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_aayug"]
-diffuse_texture = SubResource("GradientTexture2D_fm12m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e2pe"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6tq7"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7rch"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i021g"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkmy3"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xmok"]
+atlas = ExtResource("2_1htwi")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2o42e"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_1jj08")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_x6tjt")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_7e2pe")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_g6tq7")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7rch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i021g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkmy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xmok")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0in0"]
+size = Vector2(56, 42)
 
 [node name="MossGuy" type="CharacterBody2D"]
 script = ExtResource("1_an01y")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-31, 31, -31, 0, -24, -17, -14, -25, 0, -28, 12, -25, 24, -17, 29, 0, 29, 31)
+[node name="Character" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2o42e")
+animation = &"running"
+autoplay = "walking"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("CanvasTexture_aayug")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_o0in0")
 
 [node name="FlightTrigger" type="Area2D" parent="."]
 position = Vector2(0, 31)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FlightTrigger"]
-scale = Vector2(0.6, 0.6)
+visible = false
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(-128, 0, 0.336761, 0, 128, 0, 124, -31, 111, -61, 91, -88, 63, -108, 33, -121, 0, -125, -33, -121, -64, -108, -90, -88, -111, -61, -123, -29)
 
 [node name="SafetyBuffer" type="Area2D" parent="."]
 position = Vector2(0, 31)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SafetyBuffer"]
-scale = Vector2(1.5, 0.75)
+visible = false
+position = Vector2(0, 1)
+scale = Vector2(2, 0.75)
 polygon = PackedVector2Array(-128, 0, 0.336761, 0, 128, 0, 124, -31, 111, -61, 91, -88, 63, -108, 33, -121, 0, -125, -33, -121, -64, -108, -90, -88, -111, -61, -123, -29)
 
 [connection signal="body_entered" from="FlightTrigger" to="." method="_on_detection_area_body_entered"]

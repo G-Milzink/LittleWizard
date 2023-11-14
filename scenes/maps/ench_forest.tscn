@@ -101,7 +101,7 @@ color = Color(0.670588, 0.670588, 0.670588, 1)
 
 [node name="creatures" type="Node2D" parent="."]
 
-[node name="MossGuy" parent="." instance=ExtResource("10_k8j7p")]
-position = Vector2(1634, 597)
+[node name="MossGuy" parent="creatures" instance=ExtResource("10_k8j7p")]
+position = Vector2(1634, 612)
 
 [connection signal="body_entered" from="Transitions/EnchForest_to_WizSchool/Area2D" to="Transitions/EnchForest_to_WizSchool" method="_on_area_2d_body_entered"]

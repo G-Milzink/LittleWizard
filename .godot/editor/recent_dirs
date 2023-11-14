@@ -1,3 +1,5 @@
+res://textures/creatures
+res://0_PNG/creatures
 res://scripts/creatures
 res://scenes/creatures
 res://scripts/transitions
@@ -18,5 +20,3 @@ res://scenes/npcs
 res://textures
 res://scenes
 res://triggers
-res://autoload
-res://Autoload
