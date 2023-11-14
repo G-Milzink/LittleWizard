@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://r848tilxesxf"]
+[gd_scene load_steps=9 format=3 uid="uid://r848tilxesxf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pl23f"]
 [ext_resource type="Texture2D" uid="uid://csnan8uhxyyjh" path="res://0_PNG/player/Player.png" id="1_ryitc"]
@@ -20,13 +20,16 @@ fill = 1
 fill_from = Vector2(0.5, 0.504587)
 fill_to = Vector2(0.876147, 0.844037)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ew281"]
+size = Vector2(28, 22)
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(512, 288)
 collision_layer = 7
 script = ExtResource("1_pl23f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_p77bh")
 
@@ -40,3 +43,9 @@ position = Vector2(20, -31)
 [node name="SL_orange" type="PointLight2D" parent="StaffLight"]
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_jg5ik")
+
+[node name="RepellantShapeCast" type="ShapeCast2D" parent="."]
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_ew281")
+target_position = Vector2(0, 0)
+collision_mask = 16

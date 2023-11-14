@@ -18,3 +18,7 @@ res://textures/cursor_light_orange.tres
 res://scripts/cursor.gd
 res://scripts/creatures/moss_guy.gd
 res://autoload/globals.gd
+res://shaders/hold_outline.gdshader
+res://scripts/world.gd
+res://scenes/player.tscn
+res://scripts/player.gd

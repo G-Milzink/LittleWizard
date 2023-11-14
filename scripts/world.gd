@@ -6,12 +6,21 @@ extends Node2D
 @export var map_wiz_school = preload("res://scenes/maps/wiz_school.tscn")
 @export var map_ench_forest = preload("res://scenes/maps/ench_forest.tscn")
 
-# Called when the node enters the scene tree for the first time.
+#-------------------------------------------------------------------------------
+
 func _ready():
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	var instance = map_wiz_school.instantiate()
-	add_child(instance)
-	player.position = Vector2(-1465,256-_Globals.TILE_SIZE*.5)
+	match _Globals.starting_map:
+		0:
+			var instance = map_wiz_school.instantiate()
+			add_child(instance)
+			player.position = Vector2(-1465,256-_Globals.TILE_SIZE*.5)
+		1:
+			var instance = map_ench_forest.instantiate()
+			call_deferred("add_child", instance)
+			player.position = Vector2(-528,644-_Globals.TILE_SIZE*.5)
+
+#-------------------------------------------------------------------------------
 
 func _Transition_WizSchool2EnchForest():
 	var instance = map_ench_forest.instantiate()

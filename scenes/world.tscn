@@ -9,5 +9,6 @@ script = ExtResource("1_2h4tx")
 
 [node name="Player" parent="." instance=ExtResource("3_gf6f0")]
 position = Vector2(-655, -672)
+collision_mask = 17
 
 [node name="Camera" parent="." instance=ExtResource("4_x0tt8")]

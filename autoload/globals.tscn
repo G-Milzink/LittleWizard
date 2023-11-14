@@ -7,3 +7,4 @@ script = ExtResource("1_xvy7o")
 player_jump_velocity = -425
 hold_duration = 3.5
 Fargnel_player_can_pass = true
+starting_map = 1

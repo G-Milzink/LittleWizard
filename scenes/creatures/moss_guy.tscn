@@ -1,7 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpkhp0eynbfj1"]
+[gd_scene load_steps=15 format=3 uid="uid://cpkhp0eynbfj1"]
 
 [ext_resource type="Script" path="res://scripts/creatures/moss_guy.gd" id="1_an01y"]
 [ext_resource type="Texture2D" uid="uid://2wr3jo4t6yko" path="res://textures/creatures/moss_guy.tres" id="2_1htwi"]
+[ext_resource type="Shader" path="res://shaders/hold_outline.gdshader" id="2_7s5np"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a4rlw"]
+shader = ExtResource("2_7s5np")
+shader_parameter/outline_color = Color(1, 0.45098, 0, 1)
+shader_parameter/width = 2.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jj08"]
 atlas = ExtResource("2_1htwi")
@@ -76,16 +82,18 @@ animations = [{
 size = Vector2(52, 42)
 
 [node name="MossGuy" type="CharacterBody2D" groups=["clickable"]]
+collision_layer = 17
 script = ExtResource("1_an01y")
 moveSpeed = 75.0
 runSpeed = 200
 
-[node name="Character" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_a4rlw")
 sprite_frames = SubResource("SpriteFrames_2o42e")
-animation = &"running"
+animation = &"walking"
 autoplay = "walking"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_o0in0")
 
@@ -93,9 +101,8 @@ shape = SubResource("RectangleShape2D_o0in0")
 position = Vector2(0, 31)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FlightTrigger"]
-visible = false
 position = Vector2(0, 1)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.4)
 polygon = PackedVector2Array(-128, 0, 0.336761, 0, 128, 0, 124, -31, 111, -61, 91, -88, 63, -108, 33, -121, 0, -125, -33, -121, -64, -108, -90, -88, -111, -61, -123, -29)
 
 [node name="SafetyBuffer" type="Area2D" parent="."]
@@ -112,6 +119,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MouseDetection"]
+visible = false
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_o0in0")
 
