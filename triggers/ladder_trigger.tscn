@@ -133,19 +133,19 @@ _data = {
 [node name="LadderTrigger" type="Node2D"]
 script = ExtResource("1_346ox")
 
-[node name="Up_Area" type="Area2D" parent="."]
+[node name="Ladder_Up" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Up_Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder_Up"]
 position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_s4447")
 
-[node name="Down_Area" type="Area2D" parent="."]
+[node name="Ladder_Down" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Down_Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder_Down"]
 position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_s4447")
 
@@ -183,10 +183,10 @@ libraries = {
 "": SubResource("AnimationLibrary_o430u")
 }
 
-[connection signal="body_entered" from="Up_Area" to="." method="_on_up_area_body_entered"]
-[connection signal="body_exited" from="Up_Area" to="." method="_on_up_area_body_exited"]
-[connection signal="body_entered" from="Down_Area" to="." method="_on_down_area_body_entered"]
-[connection signal="body_exited" from="Down_Area" to="." method="_on_down_area_body_exited"]
+[connection signal="body_entered" from="Ladder_Up" to="." method="_on_ladder_up_body_entered"]
+[connection signal="body_exited" from="Ladder_Up" to="." method="_on_ladder_up_body_exited"]
+[connection signal="body_entered" from="Ladder_Down" to="." method="_on_ladder_down_body_entered"]
+[connection signal="body_exited" from="Ladder_Down" to="." method="_on_ladder_down_body_exited"]
 [connection signal="body_entered" from="Icon_Area_Up" to="." method="_on_icon_area_up_body_entered"]
 [connection signal="body_exited" from="Icon_Area_Up" to="." method="_on_icon_area_up_body_exited"]
 [connection signal="body_entered" from="Icon_Area_Down" to="." method="_on_icon_area_down_body_entered"]

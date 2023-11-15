@@ -25,3 +25,6 @@ res://scripts/player.gd
 res://scenes/music_player.tscn
 res://scripts/utils/music_player.gd
 res://main.tscn
+res://triggers/ladder_trigger.tscn
+res://scripts/ladder_trigger.gd
+res://scripts/main.gd

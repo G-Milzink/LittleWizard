@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var sprite_player_body = $Sprite2D
 @onready var staff_light = $StaffLight
 @onready var repellant_shape_cast = $RepellantShapeCast
+@onready var floor_check = $FloorCheck
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -12,29 +13,26 @@ func _ready():
 
 
 func _physics_process(delta):
-
-	_handleClimbing(delta)
-	_handleJump(delta)
 	_addGravity(delta)
+	_handleClimbing(delta)
+	_handleJump(delta)	
 	_handleRepellant()
 	_handleMovement(delta)
 
-
 	move_and_slide()
 	_transmitPlayerPosition()
-
 
 func _transmitPlayerPosition():
 	_Globals.player_position = position
 
 func _addGravity(delta):
-	if !is_on_floor() && !_Globals.is_climbing:
+	if !is_on_floor():
+		if !_Globals.is_climbing:
 			velocity.y += gravity * delta
 
 func _handleJump(delta):
-	if !_Globals.can_climb_up:
-		if Input.is_action_just_pressed("jump") and is_on_floor():
-			velocity.y = _Globals.player_jump_velocity
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = _Globals.player_jump_velocity
 
 func _handleMovement(delta):
 	if !_Globals.is_repelled:
@@ -55,26 +53,36 @@ func _handleMovement(delta):
 				staff_light.position.x = 20
 
 func _handleClimbing(delta):
-	var climb_direction = 0
-	
-	if _Globals.can_climb_up:
-		if Input.is_action_pressed("jump"):
-			climb_direction = -1
-			_Globals.is_climbing = true
-			self.set_collision_mask_value(1,false)
-	
-	if _Globals.can_climb_down:
-		if Input.is_action_pressed("move_down"):
-			climb_direction = 1
-			_Globals.is_climbing = true
-			self.set_collision_mask_value(1,false)
-	
-	if climb_direction != 0:
-		velocity.y = climb_direction * _Globals.player_climb_speed
-	
-	if !_Globals.is_climbing:
-		self.set_collision_mask_value(1,true)
 
+	if _Globals.can_climb_up && !_Globals.is_climbing:
+		if Input.is_action_just_pressed("action"):
+			if !_Globals.is_climbing:
+				_Globals.is_climbing = true
+				position.y = position.y - 4
+			else:
+				_Globals.is_climbing = false
+	
+	if _Globals.can_climb_down && !_Globals.is_climbing:
+		if Input.is_action_just_pressed("action"):
+			if !_Globals.is_climbing:
+				_Globals.is_climbing = true
+				position.y = position.y - 4
+			else:
+				_Globals.is_climbing = false
+	
+	if _Globals.is_climbing:
+		self.set_collision_mask_value(1,false)
+		var direction = Input.get_axis("jump", "move_down")
+		if direction:
+			velocity.y = direction * _Globals.player_climb_speed
+		else:
+			velocity.y = move_toward(velocity.x, 0, _Globals.player_climb_speed)
+	else:
+		self.set_collision_mask_value(1,true)
+	
+	if floor_check.is_colliding():
+		self.set_collision_mask_value(1,true)
+	
 func _handleRepellant():
 	if repellant_shape_cast.is_colliding() && !_Globals.is_repelled:
 		var repellant = repellant_shape_cast.get_collider(0)

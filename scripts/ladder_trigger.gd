@@ -1,13 +1,10 @@
 extends Node2D
 
-@export var UP_area_y_scale = 1.0
-@export var UP_area_y_offset = 0
-@export var DOWN_area_y_scale = 1.0
-@export var DOWN_area_y_offset = 0
+@export var ladder_y_scale = 1.0
 
+@onready var ladder_up = $Ladder_Up
+@onready var ladder_down = $Ladder_Down
 
-@onready var up_area = $Up_Area
-@onready var down_area = $Down_Area
 @onready var icon_area_down = $Icon_Area_Down
 
 @onready var up_arrow = $Icon_Area_Up/Up_Arrow
@@ -19,26 +16,23 @@ extends Node2D
 func _ready():
 	up_arrow.visible = false
 	down_arrow.visible = false
-	icon_area_down.position.y = (UP_area_y_scale * -64) - 16
 	
-	up_area.scale.y = UP_area_y_scale
-	up_area.position.y = UP_area_y_offset
-	down_area.scale.y = DOWN_area_y_scale
-	down_area.position.y = DOWN_area_y_offset
-	
-	
+	ladder_up.scale.y = ladder_y_scale
+	ladder_down.scale.y = ladder_y_scale
+	ladder_down.position.y = -64
+	icon_area_down.position.y = (ladder_y_scale * -64) - 16
 
-func _on_up_area_body_entered(body):
+func _on_ladder_up_body_entered(body):
 	_Globals.can_climb_up = true
 
-func _on_up_area_body_exited(body):
+func _on_ladder_up_body_exited(body):
 	_Globals.can_climb_up = false
 	_Globals.is_climbing = false
 
-func _on_down_area_body_entered(body):
+func _on_ladder_down_body_entered(body):
 	_Globals.can_climb_down = true
 
-func _on_down_area_body_exited(body):
+func _on_ladder_down_body_exited(body):
 	_Globals.can_climb_down = false
 	_Globals.is_climbing = false
 

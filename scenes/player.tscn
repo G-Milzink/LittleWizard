@@ -49,3 +49,8 @@ position = Vector2(0, 22)
 shape = SubResource("RectangleShape2D_ew281")
 target_position = Vector2(0, 0)
 collision_mask = 16
+
+[node name="FloorCheck" type="RayCast2D" parent="."]
+position = Vector2(0, 32)
+enabled = false
+target_position = Vector2(0, 2)

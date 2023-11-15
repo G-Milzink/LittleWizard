@@ -17,6 +17,7 @@ var current_spell = "Hold"
 
 var can_climb_up = false
 var can_climb_down = false
+
 var is_climbing = false
 var is_repelled = false
 

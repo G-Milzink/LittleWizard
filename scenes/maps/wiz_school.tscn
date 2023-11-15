@@ -179,81 +179,55 @@ color = Color(0.670588, 0.670588, 0.670588, 1)
 
 [node name="LadderTrigger" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(160, 640)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger2" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(288, 320)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger3" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(160, 0)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger4" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(288, -320)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger5" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(160, -640)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger6" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(992, -960)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger7" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(-928, -960)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
-
-[node name="LadderTrigger9" parent="Triggers" instance=ExtResource("7_ig5l7")]
-position = Vector2(-928, -1600)
-UP_area_y_scale = 4.0
-DOWN_area_y_scale = 3.1
-DOWN_area_y_offset = -64
-
-[node name="LadderTrigger11" parent="Triggers" instance=ExtResource("7_ig5l7")]
-position = Vector2(-544, -1856)
-UP_area_y_scale = 4.0
-DOWN_area_y_scale = 3.1
-DOWN_area_y_offset = -64
-
-[node name="LadderTrigger13" parent="Triggers" instance=ExtResource("7_ig5l7")]
-position = Vector2(-544, -2752)
-UP_area_y_scale = 7.0
-DOWN_area_y_scale = 6.1
-DOWN_area_y_offset = -64
-
-[node name="LadderTrigger10" parent="Triggers" instance=ExtResource("7_ig5l7")]
-position = Vector2(-927, -2112)
-UP_area_y_scale = 10.0
-DOWN_area_y_scale = 9.1
-DOWN_area_y_offset = -64
-
-[node name="LadderTrigger12" parent="Triggers" instance=ExtResource("7_ig5l7")]
-position = Vector2(163, -2112)
-UP_area_y_scale = 10.0
-DOWN_area_y_scale = 9.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
 
 [node name="LadderTrigger8" parent="Triggers" instance=ExtResource("7_ig5l7")]
 position = Vector2(-544, -1280)
-UP_area_y_scale = 5.0
-DOWN_area_y_scale = 4.1
-DOWN_area_y_offset = -64
+ladder_y_scale = 5.0
+
+[node name="LadderTrigger9" parent="Triggers" instance=ExtResource("7_ig5l7")]
+position = Vector2(-928, -1600)
+ladder_y_scale = 4.0
+
+[node name="LadderTrigger11" parent="Triggers" instance=ExtResource("7_ig5l7")]
+position = Vector2(-544, -1856)
+ladder_y_scale = 4.0
+
+[node name="LadderTrigger13" parent="Triggers" instance=ExtResource("7_ig5l7")]
+position = Vector2(-544, -2752)
+ladder_y_scale = 7.0
+
+[node name="LadderTrigger10" parent="Triggers" instance=ExtResource("7_ig5l7")]
+position = Vector2(-927, -2112)
+ladder_y_scale = 10.0
+
+[node name="LadderTrigger12" parent="Triggers" instance=ExtResource("7_ig5l7")]
+position = Vector2(163, -2112)
+ladder_y_scale = 10.0
 
 [node name="Npcs" type="Node2D" parent="."]
 
