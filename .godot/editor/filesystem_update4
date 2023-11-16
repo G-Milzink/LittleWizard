@@ -1,3 +1,4 @@
+res://autoload/globals.tscn
 res://textures/areas/wiz_school/wizzarding_school_wall.tres
 res://textures/areas/wiz_school/wizzarding_school_front_assets.tres
 res://textures/areas/wiz_school/wizzarding_school_back_assets.tres
@@ -8,14 +9,12 @@ res://textures/npcs/Fargnel.tres
 res://tilesets/ench_forest.tres
 res://textures/creatures/moss_guy.tres
 res://shaders/hold_outline.gdshader
-res://scenes/spell_amulet.tscn
-res://scenes/spell_amulet.gd
-res://scenes/world.tscn
 res://textures/Cursor_orange.tres
 res://textures/cursor_light_orange.tres
-res://scripts/cursor.gd
-res://scripts/world.gd
-res://scenes/cursor.tscn
-res://autoload/globals.tscn
-res://scripts/spell_amulet.gd
 res://main.tscn
+res://scenes/world.tscn
+res://scenes/spell_amulet.tscn
+res://scenes/cursor.tscn
+res://scripts/spell_amulet.gd
+res://scenes/maps/ench_forest.tscn
+res://scenes/spells/platform_spell.tscn
