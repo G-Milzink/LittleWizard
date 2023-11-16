@@ -40,11 +40,15 @@ func _Change_Color():
 	match _Globals.current_spell:
 		"Hold":
 			cursor_icon.play("Hold")
+			cursor_light.color = Color("ff7300")
 		"Light":
 			cursor_icon.play("Light")
+			cursor_light.color = Color("6ebb00")
 		"Platform":
 			cursor_icon.play("Platform")
+			cursor_light.color = Color("0097bb")
 		"Purple":
 			cursor_icon.play("Purple")
+			cursor_light.color = Color("9601df")
 		_:
-			pass
+			pass 

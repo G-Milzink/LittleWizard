@@ -20,3 +20,5 @@ res://scenes/maps/ench_forest.tscn
 res://scenes/spells/platform_spell.tscn
 res://scripts/cursor.gd
 res://scenes/creatures/moss_guy.tscn
+res://scenes/maps/wiz_school.tscn
+res://scenes/lights/sphere_light.tscn

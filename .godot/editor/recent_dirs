@@ -1,3 +1,4 @@
+res://scenes/lights
 res://textures
 res://0_PNG/UI
 res://scenes/spells
@@ -13,7 +14,6 @@ res://scripts/transitions
 res://0_PNG/tilesets
 res://tilesets
 res://scenes/maps
-res://scenes/lights
 res://textures/interactables
 res://0_PNG/paralax/WizardingSchool
 res://textures/areas/wiz_school

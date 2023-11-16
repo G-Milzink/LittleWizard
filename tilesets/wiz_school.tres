@@ -532,6 +532,18 @@ use_texture_padding = false
 2:4/0 = 0
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/0/physics_layer_0/angular_velocity = 0.0
+2:5/animation_columns = 4
+2:5/animation_speed = 3.0
+2:5/animation_frame_0/duration = 1.0
+2:5/animation_frame_1/duration = 1.0
+2:5/animation_frame_2/duration = 1.0
+2:5/animation_frame_3/duration = 1.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s53tu"]
 polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -27.5, 32, -27.0769, -27.0769, -32, -27.0769)

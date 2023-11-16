@@ -18,6 +18,7 @@ fill_to = Vector2(0.9, 0.8)
 metadata/_snap_enabled = true
 
 [node name="SpellAmulet" type="Node2D"]
+z_index = 75
 script = ExtResource("1_bpqg2")
 
 [node name="area_orange" type="Area2D" parent="."]
