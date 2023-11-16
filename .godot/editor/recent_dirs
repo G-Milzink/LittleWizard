@@ -1,3 +1,5 @@
+res://textures
+res://0_PNG/UI
 res://scenes/spells
 res://scripts
 res://scenes
@@ -17,6 +19,4 @@ res://0_PNG/paralax/WizardingSchool
 res://textures/areas/wiz_school
 res://0_PNG/npcs
 res://scripts/npcs
-res://0_PNG/UI
 res://textures/npcs
-res://scenes/npcs

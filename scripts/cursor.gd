@@ -8,6 +8,9 @@ extends Node2D
 @onready var sparkle = $Sparkle
 @onready var cursor_light = $CursorLight
 
+@onready var cursor_icon = $Cursor
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
@@ -17,17 +20,31 @@ func _ready():
 	cursor_light.texture_scale = base_scale
 
 func _process(delta):
+	_Change_Color()
 	var new_position = get_global_mouse_position()
 	position = new_position
 
 func _on_area_2d_body_entered(body):
-	if body.is_in_group("clickable"):
+	if body.is_in_group("can_hold") && _Globals.current_spell == "Hold":
 		sparkle.emitting = true
 		cursor_light.energy = active_intensity
 		cursor_light.texture_scale = active_scale
 
 func _on_area_2d_body_exited(body):
-	if body.is_in_group("clickable"):
+	if body.is_in_group("can_hold") && _Globals.current_spell == "Hold":
 		sparkle.emitting = false
 		cursor_light.energy = base_intensity
 		cursor_light.texture_scale = base_scale
+
+func _Change_Color():
+	match _Globals.current_spell:
+		"Hold":
+			cursor_icon.play("Hold")
+		"Light":
+			cursor_icon.play("Light")
+		"Platform":
+			cursor_icon.play("Platform")
+		"Purple":
+			cursor_icon.play("Purple")
+		_:
+			pass

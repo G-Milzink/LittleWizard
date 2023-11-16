@@ -1,9 +1,60 @@
-[gd_scene load_steps=8 format=3 uid="uid://w21k2qf8gfuu"]
+[gd_scene load_steps=13 format=3 uid="uid://w21k2qf8gfuu"]
 
 [ext_resource type="Script" path="res://scripts/cursor.gd" id="1_n3t4e"]
-[ext_resource type="Texture2D" uid="uid://bk1m6i41rycqs" path="res://textures/Cursor_orange.tres" id="2_bb2ml"]
+[ext_resource type="Texture2D" uid="uid://bk1m6i41rycqs" path="res://textures/Cursor.tres" id="2_l4082"]
 [ext_resource type="Texture2D" uid="uid://ccsjb08kp8e3b" path="res://textures/cursor_light_orange.tres" id="3_m1e1t"]
 [ext_resource type="Texture2D" uid="uid://topvwof3cqno" path="res://0_PNG/particles/cursor/cursor_sparkle_orange.png" id="4_5qxc8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t41vm"]
+atlas = ExtResource("2_l4082")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4dto"]
+atlas = ExtResource("2_l4082")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f7ik"]
+atlas = ExtResource("2_l4082")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n3hw"]
+atlas = ExtResource("2_l4082")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u7wq7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t41vm")
+}],
+"loop": true,
+"name": &"Hold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4dto")
+}],
+"loop": true,
+"name": &"Light",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f7ik")
+}],
+"loop": true,
+"name": &"Platform",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n3hw")
+}],
+"loop": true,
+"name": &"Purple",
+"speed": 5.0
+}]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hi4xi"]
 particles_animation = true
@@ -32,13 +83,13 @@ size = Vector2(9, 9)
 collision_layer = 8
 script = ExtResource("1_n3t4e")
 
+[node name="Cursor" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_u7wq7")
+animation = &"Hold"
+
 [node name="Collider" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, 9, 0, 18, 9, 18, 12, 12, 18, 9, 18, 0, 9)
-
-[node name="Cursor" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(32, 32)
-texture = ExtResource("2_bb2ml")
 
 [node name="CursorLight" type="PointLight2D" parent="."]
 scale = Vector2(0.5, 0.5)

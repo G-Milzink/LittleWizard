@@ -64,7 +64,9 @@ WizardingSchool_ts_s.png::CompressedTexture2D::2894622584822120148::1699803400::
 WizardingSchoo_Walll.png::CompressedTexture2D::155416432758089250::1699717395::1699800075::1::::<><>::
 WizardingSchoo_Walll_n.png::CompressedTexture2D::1070858387410208385::1699805792::1699805795::1::::<><>::
 WizardingSchoo_Walll_s.png::CompressedTexture2D::7459983487957849292::1699806726::1699806729::1::::<><>::
-::res://0_PNG/UI/::1700146240
+::res://0_PNG/UI/::1700146693
+Cursors.png::CompressedTexture2D::3474885317952545646::1700146632::1700146697::1::::<><>::
+Cursors_n.png::CompressedTexture2D::298218356931432564::1700146693::1700146697::1::::<><>::
 Cursor_blue.png::CompressedTexture2D::7799754026867142641::1700146219::1700146243::1::::<><>::
 Cursor_green.png::CompressedTexture2D::2342456187519317760::1700146231::1700146243::1::::<><>::
 Cursor_orange.png::CompressedTexture2D::8152933055243366286::1699748060::1699749299::1::::<><>::
@@ -82,8 +84,8 @@ signal_bus.gd::GDScript::-1::1699841966::0::1::::<>Node<>::
 signal_bus.tscn::PackedScene::6087556111961818747::1699892751::0::1::::<><>::res://autoload/signal_bus.gd
 ::res://dev_tools/::1699303234
 tileset_template.png::CompressedTexture2D::8812036719308201730::1699303227::1699303234::1::::<><>::
-::res://scenes/::1700145484
-cursor.tscn::PackedScene::1601490702266146480::1700145484::0::1::::<><>::res://scripts/cursor.gd<>uid://bk1m6i41rycqs::::res://textures/Cursor_orange.tres<>uid://ccsjb08kp8e3b::::res://textures/cursor_light_orange.tres<>uid://topvwof3cqno::::res://0_PNG/particles/cursor/cursor_sparkle_orange.png
+::res://scenes/::1700146289
+cursor.tscn::PackedScene::1601490702266146480::1700146827::0::1::::<><>::res://scripts/cursor.gd<>uid://ccsjb08kp8e3b::::res://textures/cursor_light_orange.tres<>uid://topvwof3cqno::::res://0_PNG/particles/cursor/cursor_sparkle_orange.png
 music_player.tscn::PackedScene::2760844066648488818::1699998076::0::1::::<><>::res://scripts/utils/music_player.gd
 player.tscn::PackedScene::1263155542552404427::1700013016::0::1::::<><>::res://scripts/player.gd<>uid://csnan8uhxyyjh
 player_camera.tscn::PackedScene::7765725910477312229::1699833956::0::1::::<><>::res://scripts/player_camera.gd
@@ -121,11 +123,11 @@ WizSchool_to_EnchForest.gd::GDScript::-1::1699843426::0::1::::<>Node2D<>::
 ::res://scripts/utils/::1699998076
 light_flicker.gd::GDScript::-1::1699808441::0::1::::<>PointLight2D<>::
 music_player.gd::GDScript::-1::1699998076::0::1::::<>Node2D<>::
-::res://shaders/::1700145484
-hold_outline.gdshader::Shader::-1::1700145484::0::1::::<><>::
+::res://shaders/::1700146289
+hold_outline.gdshader::Shader::-1::1700146827::0::1::::<><>::
 ::res://textures/::1700144269
 cursor_light_orange.tres::GradientTexture2D::4950927457502147137::1700144269::0::1::::<><>::
-Cursor_orange.tres::CanvasTexture::3142767371394342538::1700144269::0::1::::<><>::uid://doflu7nslo25g::::res://0_PNG/UI/Cursor_orange.png<>uid://bmdy3fkqqm6u5::::res://0_PNG/UI/Cursor_orange_n.png
+Cursor_orange.tres::CanvasTexture::3142767371394342538::1700146788::0::1::::<><>::uid://bpri4av7hj45g::::res://0_PNG/UI/Cursors.png<>uid://eipu3miqxdui::::res://0_PNG/UI/Cursors_n.png
 ::res://textures/areas/::1700012266
 ::res://textures/areas/ench_forest/::1700012943
 ::res://textures/areas/wiz_school/::1700144269

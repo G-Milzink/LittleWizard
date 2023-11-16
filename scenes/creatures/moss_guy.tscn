@@ -81,7 +81,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0in0"]
 size = Vector2(52, 42)
 
-[node name="MossGuy" type="CharacterBody2D" groups=["clickable"]]
+[node name="MossGuy" type="CharacterBody2D" groups=["can_hold"]]
 collision_layer = 17
 script = ExtResource("1_an01y")
 moveSpeed = 75.0

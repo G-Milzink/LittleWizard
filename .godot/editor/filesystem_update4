@@ -18,3 +18,5 @@ res://scenes/cursor.tscn
 res://scripts/spell_amulet.gd
 res://scenes/maps/ench_forest.tscn
 res://scenes/spells/platform_spell.tscn
+res://scripts/cursor.gd
+res://scenes/creatures/moss_guy.tscn

@@ -20,6 +20,38 @@ metadata/_snap_enabled = true
 [node name="SpellAmulet" type="Node2D"]
 script = ExtResource("1_bpqg2")
 
+[node name="area_orange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_orange"]
+process_physics_priority = -1
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[node name="area_green" type="Area2D" parent="."]
+position = Vector2(35, 35)
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_green"]
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[node name="area_blue" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_blue"]
+position = Vector2(0, 70)
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[node name="area_purple" type="Area2D" parent="."]
+position = Vector2(-35, 35)
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_purple"]
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
 [node name="Amulet" type="Sprite2D" parent="."]
 texture = ExtResource("1_jcs4a")
 
@@ -62,38 +94,6 @@ position = Vector2(-35, 0)
 color = Color(0.427451, 0.0431373, 0.682353, 1)
 texture = SubResource("GradientTexture2D_jgg60")
 texture_scale = 1.5
-
-[node name="area_orange" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 9
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_orange"]
-process_physics_priority = -1
-polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
-
-[node name="area_green" type="Area2D" parent="."]
-position = Vector2(35, 35)
-collision_layer = 0
-collision_mask = 9
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_green"]
-polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
-
-[node name="area_blue" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 9
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_blue"]
-position = Vector2(0, 70)
-polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
-
-[node name="area_purple" type="Area2D" parent="."]
-position = Vector2(-35, 35)
-collision_layer = 0
-collision_mask = 9
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_purple"]
-polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
 
 [connection signal="area_entered" from="area_orange" to="." method="_on_area_orange_area_entered"]
 [connection signal="area_entered" from="area_green" to="." method="_on_area_green_area_entered"]
