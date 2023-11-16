@@ -48,7 +48,7 @@ func _Display_Current_Spell():
 	match _Globals.current_spell:
 		"Hold":
 			xtal_orange.visible=true
-		"Light":
+		"Pixie":
 			xtal_green.visible=true
 		"Platform":
 			xtal_blue.visible=true
@@ -63,7 +63,7 @@ func _on_area_orange_area_entered(area):
 func _on_area_green_area_entered(area):
 	xtal_green.visible = true
 	previous_spell = _Globals.current_spell
-	_Globals.current_spell = "Light"
+	_Globals.current_spell = "Pixie"
 
 func _on_area_blue_area_entered(area):
 	xtal_blue.visible = true

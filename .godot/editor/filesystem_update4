@@ -22,3 +22,6 @@ res://scripts/spells/platform_spell.gd
 res://scenes/spells/platform_spell.tscn
 res://scripts/cursor.gd
 res://scenes/maps/ench_forest.tscn
+res://scripts/spells/Pixie.gd
+res://scenes/spells/pixie.tscn
+res://scripts/spell_amulet.gd

@@ -28,6 +28,8 @@ var is_repelled = false
 
 var current_map
 var player_position = Vector2.ZERO
+var pixie_send_to_location = Vector2.ZERO
+var pixie_underway = false
 
 # Master Fargnel:
 @export_category("NPCs:")
