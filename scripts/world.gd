@@ -3,8 +3,8 @@ extends Node2D
 @onready var world = $"."
 @onready var player = $Player
 
-@export var map_wiz_school = preload("res://scenes/maps/wiz_school.tscn")
-@export var map_ench_forest = preload("res://scenes/maps/ench_forest.tscn")
+var map_wiz_school = preload("res://scenes/maps/wiz_school.tscn")
+var map_ench_forest = preload("res://scenes/maps/ench_forest.tscn")
 
 
 

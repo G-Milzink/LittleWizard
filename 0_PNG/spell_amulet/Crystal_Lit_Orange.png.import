@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg67ny778pgtu"
-path="res://.godot/imported/EnchantedForest.png-b90da482e2ed0a7c044b1fb72f871740.ctex"
+uid="uid://dyl48k4mafuk8"
+path="res://.godot/imported/Crystal_Lit_Orange.png-7e8304759ff693424e76b6da97b6ffca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://0_ASESPRITE/EnchantedForest.png"
-dest_files=["res://.godot/imported/EnchantedForest.png-b90da482e2ed0a7c044b1fb72f871740.ctex"]
+source_file="res://0_PNG/spell_amulet/Crystal_Lit_Orange.png"
+dest_files=["res://.godot/imported/Crystal_Lit_Orange.png-7e8304759ff693424e76b6da97b6ffca.ctex"]
 
 [params]
 

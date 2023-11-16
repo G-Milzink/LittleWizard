@@ -1,5 +1,6 @@
-res://scripts/utils
+res://scripts
 res://scenes
+res://scripts/utils
 res://shaders
 res://textures/creatures
 res://0_PNG/creatures
@@ -8,7 +9,6 @@ res://scenes/creatures
 res://scripts/transitions
 res://0_PNG/tilesets
 res://tilesets
-res://scripts
 res://scenes/maps
 res://scenes/lights
 res://textures/interactables

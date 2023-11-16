@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfhr7hwgphamp"]
+
+[ext_resource type="Script" path="res://scripts/spell_amulet.gd" id="1_bpqg2"]
+[ext_resource type="Texture2D" uid="uid://csklwubuklc57" path="res://0_PNG/spell_amulet/Amulet_Crystals_Dark.png" id="1_jcs4a"]
+[ext_resource type="Texture2D" uid="uid://dyl48k4mafuk8" path="res://0_PNG/spell_amulet/Crystal_Lit_Orange.png" id="2_t88p5"]
+[ext_resource type="Texture2D" uid="uid://ck53jg2h785hv" path="res://0_PNG/spell_amulet/Crystal_Lit_Green.png" id="3_oge3q"]
+[ext_resource type="Texture2D" uid="uid://dij8nfgvmsc8f" path="res://0_PNG/spell_amulet/Crystal_Lit_Blue.png" id="4_uj018"]
+[ext_resource type="Texture2D" uid="uid://d2hrpmaw6u2nk" path="res://0_PNG/spell_amulet/Crystal_Lit_Purple.png" id="5_t1n6m"]
+
+[sub_resource type="Gradient" id="Gradient_1am4i"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jgg60"]
+gradient = SubResource("Gradient_1am4i")
+fill = 1
+fill_from = Vector2(0.504587, 0.518349)
+fill_to = Vector2(0.9, 0.8)
+metadata/_snap_enabled = true
+
+[node name="SpellAmulet" type="Node2D"]
+script = ExtResource("1_bpqg2")
+
+[node name="Amulet" type="Sprite2D" parent="."]
+texture = ExtResource("1_jcs4a")
+
+[node name="xtal_orange" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_t88p5")
+
+[node name="PointLight2D" type="PointLight2D" parent="xtal_orange"]
+position = Vector2(0, -35)
+color = Color(0.87451, 0.360784, 0, 1)
+texture = SubResource("GradientTexture2D_jgg60")
+texture_scale = 1.5
+
+[node name="xtal_green" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_oge3q")
+
+[node name="PointLight2D" type="PointLight2D" parent="xtal_green"]
+position = Vector2(35, 0)
+color = Color(0.34902, 0.635294, 0.0705882, 1)
+texture = SubResource("GradientTexture2D_jgg60")
+texture_scale = 1.5
+
+[node name="xtal_blue" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_uj018")
+
+[node name="PointLight2D" type="PointLight2D" parent="xtal_blue"]
+position = Vector2(0, 35)
+color = Color(0, 0.470588, 0.74902, 1)
+texture = SubResource("GradientTexture2D_jgg60")
+texture_scale = 1.5
+
+[node name="xtal_purple" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_t1n6m")
+
+[node name="PointLight2D" type="PointLight2D" parent="xtal_purple"]
+position = Vector2(-35, 0)
+color = Color(0.427451, 0.0431373, 0.682353, 1)
+texture = SubResource("GradientTexture2D_jgg60")
+texture_scale = 1.5
+
+[node name="area_orange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_orange"]
+process_physics_priority = -1
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[node name="area_green" type="Area2D" parent="."]
+position = Vector2(35, 35)
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_green"]
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[node name="area_blue" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_blue"]
+position = Vector2(0, 70)
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[node name="area_purple" type="Area2D" parent="."]
+position = Vector2(-35, 35)
+collision_layer = 0
+collision_mask = 9
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area_purple"]
+polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
+
+[connection signal="area_entered" from="area_orange" to="." method="_on_area_orange_area_entered"]
+[connection signal="area_entered" from="area_green" to="." method="_on_area_green_area_entered"]
+[connection signal="area_entered" from="area_blue" to="." method="_on_area_blue_area_entered"]
+[connection signal="area_entered" from="area_purple" to="." method="_on_area_purple_area_entered"]
