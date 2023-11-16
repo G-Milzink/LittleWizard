@@ -1,11 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbykmai6pnpdq"]
+[gd_scene load_steps=3 format=3 uid="uid://cbykmai6pnpdq"]
 
 [ext_resource type="Texture2D" uid="uid://da261iaiwehjo" path="res://0_PNG/spells/Platform.png" id="1_1hye1"]
+[ext_resource type="Script" path="res://scripts/spells/platform_spell.gd" id="1_682yq"]
 
 [node name="PlatformSpell" type="StaticBody2D"]
+script = ExtResource("1_682yq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1hye1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-28, -8, 28, -8, 30, -7, 31, -6, 32, -4, 32, 4, 31, 6, 30, 7, 28, 8, -28, 8, -30, 7, -31, 6, -32, 4, -32, -4, -31, -6, -30, -7)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

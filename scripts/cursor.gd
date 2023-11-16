@@ -1,5 +1,7 @@
 extends Node2D
 
+var platform_spell = preload("res://scenes/spells/platform_spell.tscn")
+
 @export var base_intensity = 1.5
 @export var active_intensity = 7.0
 @export var base_scale = 1.0
@@ -23,6 +25,7 @@ func _process(delta):
 	_Change_Color()
 	var new_position = get_global_mouse_position()
 	position = new_position
+	_Platform_Spell()
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("can_hold") && _Globals.current_spell == "Hold":
@@ -52,3 +55,11 @@ func _Change_Color():
 			cursor_light.color = Color("9601df")
 		_:
 			pass 
+
+func _Platform_Spell():
+	if _Globals.current_spell == "Platform" && _Globals.can_cast_platform:
+		if Input.is_action_just_pressed("cast_spell"):
+			_Globals.can_cast_platform = false
+			var instance = platform_spell.instantiate()
+			instance.position = position
+			call_deferred("add_sibling", instance)

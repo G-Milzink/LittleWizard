@@ -1,3 +1,4 @@
+Timer
 PointLight2D
 AnimatedSprite2D
 CollisionPolygon2D
@@ -9,7 +10,6 @@ RayCast2D
 AudioStreamPlayer2D
 Node2D
 ShapeCast2D
-Timer
 GPUParticles2D
 CharacterBody2D
 ParallaxLayer

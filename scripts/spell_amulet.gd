@@ -19,7 +19,6 @@ func _ready():
 	amulet.visible = false
 
 func _process(delta):
-	print(_Globals.current_spell)
 	_Display_Current_Spell()
 	_Detect_Input()
 	if !amulet.visible:
