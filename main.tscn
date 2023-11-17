@@ -14,9 +14,5 @@ script = ExtResource("1_ysk1h")
 [node name="SpellAmulet" parent="." instance=ExtResource("5_dlygp")]
 
 [node name="Cursor" parent="." instance=ExtResource("5_a8wjq")]
-base_intensity = 1.5
-active_intensity = 7.0
-base_scale = 1.0
-active_scale = 2.0
 
 [node name="MusicPlayer" parent="." instance=ExtResource("5_fjtg7")]

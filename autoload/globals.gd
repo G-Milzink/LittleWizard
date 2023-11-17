@@ -14,6 +14,7 @@ const START_LOCATION = Vector2(-1456,256 - TILE_SIZE*0.5)
 @export var hold_duration = 3.0 #in seconds
 @export var has_spell_Platform = true
 @export var platform_duration = 3.0 #in seconds
+@export var has_spell_pixie = true
 
 
 var current_spell = "Hold"

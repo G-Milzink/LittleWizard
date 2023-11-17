@@ -4,13 +4,15 @@
 [ext_resource type="Script" path="res://scripts/spells/platform_spell.gd" id="1_682yq"]
 
 [node name="PlatformSpell" type="StaticBody2D"]
+z_index = -1
 script = ExtResource("1_682yq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1hye1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-28, -8, 28, -8, 30, -7, 31, -6, 32, -4, 32, 4, 31, 6, 30, 7, 28, 8, -28, 8, -30, 7, -31, 6, -32, 4, -32, -4, -31, -6, -30, -7)
+scale = Vector2(1, 0.5)
+polygon = PackedVector2Array(-28, -16, 28, -16, 30, -14, 31, -12, 32, -8, 32, 8, 31, 12, 30, 14, 28, 16, -28, 16, -30, 14, -31, 12, -32, 8, -32, -8, -31, -12, -30, -14)
 
 [node name="Timer" type="Timer" parent="."]
 

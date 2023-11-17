@@ -9,6 +9,8 @@ var lerp_speed = 1
 func _ready():
 	position.x = _Globals.player_position.x
 	position.y = _Globals.player_position.y - (_Globals.TILE_SIZE * 2)
+	if _Globals.has_spell_pixie == false:
+		self.visible = false
 
 func _process(delta):
 	if _Globals.pixie_underway:

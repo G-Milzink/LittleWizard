@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var amulet = $"."
+@onready var cursor = $"../Cursor"
 
 @onready var xtal_orange = $xtal_orange
 @onready var xtal_green = $xtal_green
