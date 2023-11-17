@@ -8,4 +8,4 @@ player_jump_velocity = -425
 hold_duration = 3.5
 platform_duration = 3.5
 Fargnel_player_can_pass = true
-starting_map = 1
+starting_map = 0

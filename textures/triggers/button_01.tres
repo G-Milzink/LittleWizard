@@ -1,0 +1,6 @@
+[gd_resource type="CanvasTexture" load_steps=2 format=3 uid="uid://crf0ityvr1prf"]
+
+[ext_resource type="Texture2D" uid="uid://8k4e8la02mp8" path="res://0_PNG/triggers/buttons/button_01/button_01.png" id="1_mnkdb"]
+
+[resource]
+diffuse_texture = ExtResource("1_mnkdb")

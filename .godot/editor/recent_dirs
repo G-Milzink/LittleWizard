@@ -1,3 +1,11 @@
+res://scripts/triggers
+res://textures/triggers/switches
+res://scenes/triggers/switches
+res://textures/mechanics
+res://0_PNG/mechanics/triggerDoors
+res://scripts/mechanisms
+res://scenes/mechanisms
+res://textures/triggers
 res://scenes/spells
 res://scripts/spells
 res://scenes/lights
@@ -12,11 +20,3 @@ res://0_PNG/creatures
 res://scripts/creatures
 res://scenes/creatures
 res://scripts/transitions
-res://0_PNG/tilesets
-res://tilesets
-res://scenes/maps
-res://textures/interactables
-res://0_PNG/paralax/WizardingSchool
-res://textures/areas/wiz_school
-res://0_PNG/npcs
-res://scripts/npcs

@@ -11,7 +11,7 @@ var texture_purple = preload("res://0_PNG/particles/cursor/cursor_sparkle_purple
 @export var base_intensity = 1.5
 @export var active_intensity = 7.0
 @export var base_scale = 1.0
-@export var active_scale = 2.0
+@export var active_scale = 2.5
 
 @onready var sparkle = $Sparkle
 @onready var cursor_light = $CursorLight
@@ -39,24 +39,27 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("can_hold") && _Globals.current_spell == "Hold":
-		print("can hold")
 		sparkle.emitting = true
 		cursor_light.energy = active_intensity
 		cursor_light.texture_scale = active_scale
-	if body.name == "TileMap" && _Globals.current_spell == "Platform":
-		print("blocked")
-		block_platform = true
-		sparkle.emitting = false
+	if _Globals.current_spell == "Platform":
+		if body.name == "TileMap"\
+		or body.name == "Player"\
+		or body.is_in_group("can_hold"):
+			block_platform = true
+			sparkle.emitting = false
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("can_hold") && _Globals.current_spell == "Hold":
 		sparkle.emitting = false
 		cursor_light.energy = base_intensity
 		cursor_light.texture_scale = base_scale
-	if body.name == "TileMap" && _Globals.current_spell == "Platform":
-		print("free")
-		block_platform = false
-		sparkle.emitting = true
+	if _Globals.current_spell == "Platform":
+		if body.name == "TileMap"\
+		or body.name == "Player"\
+		or body.is_in_group("can_hold"):
+			block_platform = false
+			sparkle.emitting = true
 
 func _Change_Color():
 	match _Globals.current_spell:
@@ -94,4 +97,3 @@ func _Send_Pixie_Spell():
 		if Input.is_action_just_pressed("cast_spell"):
 			_Globals.pixie_send_to_location = position
 			_Globals.pixie_underway = true
-			print("send pixie")
