@@ -1,3 +1,4 @@
+res://0_PNG/UI
 res://scripts/triggers
 res://textures/triggers/switches
 res://scenes/triggers/switches
@@ -10,7 +11,6 @@ res://scenes/spells
 res://scripts/spells
 res://scenes/lights
 res://textures
-res://0_PNG/UI
 res://scripts
 res://scenes
 res://scripts/utils

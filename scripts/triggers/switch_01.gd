@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var sprite = $Sprite
+@onready var icon = $Icon
 
 var in_range = false
 var active = false
@@ -8,10 +9,12 @@ var active = false
 func _on_area_2d_body_entered(body):
 	if body.name == "Player":
 		in_range = true
+		icon.visible = true
 
 func _on_area_2d_body_exited(body):
 	if body.name == "Player":
 		in_range = false
+		icon.visible = false
 
 func _process(delta):
 	if in_range:

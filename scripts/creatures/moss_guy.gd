@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var moss_guy = $"."
 @onready var sprite = $Sprite
 @onready var hold_timer = $HoldTimer
+@onready var edge_left = $Edge_Detection/Edge_Left
+@onready var edge_right = $Edge_Detection/Edge_Right
 
 #-------------------------------------------------------------------
 
@@ -17,7 +19,7 @@ var selected = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var creature_held = false
-
+var turning = false
 #---------------------------------------------------------------------
 
 func _ready():
@@ -28,12 +30,13 @@ func _ready():
 	else:
 		direction = -1
 	sprite.material.set_shader_parameter("width", 0)
-	
+
 #---------------------------------------------------------------------
 
 func _physics_process(delta):
 	_Handle_Spell_Hold()
 	_Handle_Movement(delta)
+	_Detect_Edge()
 	move_and_slide()
 	
 #---------------------------------------------------------------------
@@ -99,4 +102,12 @@ func _on_mouse_detection_body_entered(body):
 func _on_mouse_detection_body_exited(body):
 	selected = false
 
-
+func _Detect_Edge():
+	if !edge_left.is_colliding()\
+	or !edge_right.is_colliding():
+		if !turning:
+			turning = true
+			direction = direction * -1
+	else:
+		turning = false
+	

@@ -24,3 +24,6 @@ res://textures/mechanics/TrigDoor_ws_upwards.tres
 res://scenes/triggers/switches/switch_01.tscn
 res://scripts/triggers/switch_01.gd
 res://textures/triggers/switches/switch_01.tres
+res://scenes/maps/ench_forest.tscn
+res://scenes/creatures/moss_guy.tscn
+res://scripts/creatures/moss_guy.gd
