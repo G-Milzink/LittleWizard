@@ -110,13 +110,12 @@ position = Vector2(1634, 612)
 position = Vector2(2977, 612)
 
 [node name="MossGuy" parent="." instance=ExtResource("10_k8j7p")]
-position = Vector2(274, 536)
+position = Vector2(274, 547)
 
 [node name="Audio" type="Node" parent="."]
 
 [node name="Music" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("11_3sled")
-autoplay = true
 bus = &"Music"
 
 [node name="Ambience" type="AudioStreamPlayer" parent="Audio"]

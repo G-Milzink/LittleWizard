@@ -27,3 +27,6 @@ res://textures/triggers/switches/switch_01.tres
 res://scenes/maps/ench_forest.tscn
 res://scenes/creatures/moss_guy.tscn
 res://scripts/creatures/moss_guy.gd
+res://scripts/wiz_school.gd
+res://scenes/spells/pixie.tscn
+res://textures/areas/ench_forest/EnchForest.tres

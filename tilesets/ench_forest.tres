@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=47 format=3 uid="uid://cyjy5himrfuh8"]
 
-[ext_resource type="Texture2D" uid="uid://bw6vx6j21bco5" path="res://0_PNG/tilesets/TileSetTemplate.png" id="1_4vua0"]
+[ext_resource type="Texture2D" uid="uid://cdwmnrdtylapw" path="res://textures/areas/ench_forest/EnchForest.tres" id="1_tri8y"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p4qxe"]
 polygon = PackedVector2Array(-28, -28, 32, -28, 32, 32, -28, 32)
@@ -136,7 +136,7 @@ polygon = PackedVector2Array(-32, -32, 32, -32, 32, 28, -32, 28)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8obqf"]
 resource_name = "Floor"
-texture = ExtResource("1_4vua0")
+texture = ExtResource("1_tri8y")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
