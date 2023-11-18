@@ -1,4 +1,5 @@
 res://textures/areas/ench_forest
+res://textures/areas/wiz_school
 res://0_PNG/UI
 res://scripts/triggers
 res://textures/triggers/switches
@@ -19,4 +20,3 @@ res://shaders
 res://textures/creatures
 res://0_PNG/creatures
 res://scripts/creatures
-res://scenes/creatures
