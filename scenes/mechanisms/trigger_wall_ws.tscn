@@ -973,8 +973,6 @@ anim_speed_max = 1.5
 script = ExtResource("1_h28ps")
 set_nr_of_triggers = 0
 set_direction = 1
-open_duration = 3.0
-closing_delay = 1.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0

@@ -27,3 +27,11 @@ res://scenes/maps/Darkness.gd
 res://scripts/utils/Darkness.gd
 res://scenes/spells/pixie.tscn
 res://scripts/spells/Pixie.gd
+res://scenes/mechanisms/trigger_wall_ef.tscn
+res://textures/mechanics/TrigDoor_ef_downwards.tres
+res://textures/mechanics/TrigDoor_ef_upwards.tres
+res://scripts/mechanisms/trigger_wall_ws.gd
+res://scripts/world.gd
+res://scenes/creatures/moss_guy.tscn
+res://scripts/transitions/WizSchool_to_EnchForest.gd
+res://scripts/transitions/EnchForest_to_WizSchool.gd

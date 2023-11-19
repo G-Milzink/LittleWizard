@@ -1,3 +1,4 @@
+res://textures/mechanics
 res://0_PNG/particles
 res://textures/areas/ench_forest
 res://textures/areas/wiz_school
@@ -5,7 +6,6 @@ res://0_PNG/UI
 res://scripts/triggers
 res://textures/triggers/switches
 res://scenes/triggers/switches
-res://textures/mechanics
 res://0_PNG/mechanics/triggerDoors
 res://scripts/mechanisms
 res://scenes/mechanisms

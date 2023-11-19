@@ -1,0 +1,6 @@
+[gd_resource type="CanvasTexture" load_steps=2 format=3 uid="uid://pmokjhnasvy"]
+
+[ext_resource type="Texture2D" uid="uid://bpfy82gi8a3uc" path="res://0_PNG/mechanics/triggerDoors/TrigDoor_EF_upward.png" id="1_e3abn"]
+
+[resource]
+diffuse_texture = ExtResource("1_e3abn")

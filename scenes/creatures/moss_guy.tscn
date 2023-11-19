@@ -82,7 +82,7 @@ animations = [{
 size = Vector2(52, 42)
 
 [node name="MossGuy" type="CharacterBody2D" groups=["can_hold"]]
-collision_layer = 17
+collision_layer = 145
 script = ExtResource("1_an01y")
 moveSpeed = 75.0
 runSpeed = 200

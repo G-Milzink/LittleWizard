@@ -88,6 +88,7 @@ spell_select={
 2d_physics/layer_5="repellant"
 2d_physics/layer_6="platform_spell"
 2d_physics/layer_7="pixie"
+2d_physics/layer_8="can_trigger"
 
 [rendering]
 
