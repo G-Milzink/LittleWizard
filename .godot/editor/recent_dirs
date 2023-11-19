@@ -1,3 +1,4 @@
+res://0_PNG/particles
 res://textures/areas/ench_forest
 res://textures/areas/wiz_school
 res://0_PNG/UI
@@ -19,4 +20,3 @@ res://scripts/utils
 res://shaders
 res://textures/creatures
 res://0_PNG/creatures
-res://scripts/creatures

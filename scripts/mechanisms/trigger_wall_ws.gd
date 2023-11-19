@@ -15,6 +15,8 @@ extends StaticBody2D
 @onready var collision = $Collision
 @onready var timer = $Timer
 @onready var sprite = $AnimatedSprite2D
+@onready var upward_particles = $upward_particles
+@onready var downward_particles = $downward_particles
 
 var nr_of_triggers
 var open = false
@@ -38,48 +40,60 @@ func _process(delta):
 				else:
 					_Closing()
 			2:
-				if trigger_1.active\
-				and trigger_2.active:
+				if trigger_1.active and trigger_2.active:
 					_Opening()
 				else:
 					_Closing()
 			3:
-				if trigger_1.active\
-				and trigger_2.active\
-				and trigger_3.active:
+				if trigger_1.active and trigger_2.active and trigger_3.active:
 					_Opening()
 				else:
 					_Closing()
 	else:
-		if !open:
-			if direction == 1.0:
-				sprite.play("downwards",1.0)
-			else:
-				sprite.play("upwards",1.0)
-			var frame = sprite.get_frame()
-			collision.position.y = (direction*128.0) * ((frame+1.0)/65.0)
-			if frame == 64:
-				open = true
+		_Overide()
 
 func _Opening():
 	timer.start(closing_delay) 
 	if !open:
 		if direction == 1.0:
 			sprite.play("downwards",1.0)
+			downward_particles.set_emitting(true)
 		else:
 			sprite.play("upwards",1.0)
+			upward_particles.set_emitting(true)
 		var frame = sprite.get_frame()
 		collision.position.y = (direction*128.0) * ((frame+1.0)/65.0)
 		if frame == 64:
+			upward_particles.set_emitting(false)
+			downward_particles.set_emitting(false)
 			open = true
 
 func _Closing():
 	if timer.is_stopped() && open:
 		if direction == 1.0:
 			sprite.play("downwards",-1.0, true)
+			downward_particles.set_emitting(true)
 		else:
 			sprite.play("upwards",-1.0, true)
+			upward_particles.set_emitting(true)
 		var frame = sprite.get_frame()
 		collision.position.y = (direction*128.0) * ((frame+1.0)/65)
 		if frame == 0:
+			upward_particles.set_emitting(false)
+			downward_particles.set_emitting(false)
 			open = false
+
+func _Overide():
+	if !open:
+		if direction == 1.0:
+			sprite.play("downwards",1.0)
+			downward_particles.set_emitting(true)
+		else:
+			sprite.play("upwards",1.0)
+			upward_particles.set_emitting(true)
+		var frame = sprite.get_frame()
+		collision.position.y = (direction*128.0) * ((frame+1.0)/65.0)
+		if frame == 64:
+			upward_particles.set_emitting(false)
+			downward_particles.set_emitting(false)
+			open = true

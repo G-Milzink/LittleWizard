@@ -8,6 +8,7 @@ var in_range = false
 func _process(delta):
 	if in_range:
 		if Input.is_action_just_pressed("action"):
+			in_range = false
 			world._Transition_WizSchool2EnchForest()
 			current_map.queue_free()
 

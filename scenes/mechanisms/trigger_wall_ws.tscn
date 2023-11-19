@@ -1,8 +1,9 @@
-[gd_scene load_steps=137 format=3 uid="uid://bqh5c7t0imuoo"]
+[gd_scene load_steps=140 format=3 uid="uid://bqh5c7t0imuoo"]
 
 [ext_resource type="Script" path="res://scripts/mechanisms/trigger_wall_ws.gd" id="1_h28ps"]
 [ext_resource type="Texture2D" uid="uid://xjs2j5p86fbb" path="res://textures/mechanics/TrigDoor_ws_downwards.tres" id="2_6c0hx"]
 [ext_resource type="Texture2D" uid="uid://c5sdchnqa1hre" path="res://textures/mechanics/TrigDoor_ws_upwards.tres" id="3_fu76o"]
+[ext_resource type="Texture2D" uid="uid://br17w2whhj3bp" path="res://0_PNG/particles/dust_clouds.png" id="4_nb01x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vruj"]
 atlas = ExtResource("2_6c0hx")
@@ -951,6 +952,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t3ev1"]
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vx8b5"]
+lifetime_randomness = 0.42
+emission_shape = 3
+emission_box_extents = Vector3(-30, 1, 1)
+particle_flag_disable_z = true
+gravity = Vector3(0, -32, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+anim_speed_min = 1.0
+anim_speed_max = 1.5
+
 [node name="TriggerWall_ws" type="StaticBody2D"]
 script = ExtResource("1_h28ps")
 set_nr_of_triggers = 0
@@ -969,3 +987,16 @@ polygon = PackedVector2Array(-28, 0, -28, -127, -24, -131, 24, -131, 28, -127, 2
 position = Vector2(0, -66)
 sprite_frames = SubResource("SpriteFrames_2ltc5")
 animation = &"upwards_closed"
+
+[node name="upward_particles" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_t3ev1")
+position = Vector2(0, -132)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_vx8b5")
+texture = ExtResource("4_nb01x")
+
+[node name="downward_particles" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_t3ev1")
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_vx8b5")
+texture = ExtResource("4_nb01x")
