@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7s4c0gutwhrk"]
+[gd_scene load_steps=7 format=3 uid="uid://b7s4c0gutwhrk"]
 
 [ext_resource type="Script" path="res://scripts/spells/Pixie.gd" id="1_yote0"]
 
@@ -15,11 +15,21 @@ fill_to = Vector2(1, 1)
 metadata/_snap_enabled = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1t4l"]
-radius = 4.0
+radius = 11.0
 
-[node name="Pixie" type="StaticBody2D"]
+[sub_resource type="Gradient" id="Gradient_y3x2i"]
+offsets = PackedFloat32Array(0, 0.802784)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vjp4p"]
+gradient = SubResource("Gradient_y3x2i")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[node name="Pixie" type="CharacterBody2D"]
 z_index = 1
-collision_layer = 0
+collision_layer = 64
 collision_mask = 0
 script = ExtResource("1_yote0")
 
@@ -32,5 +42,11 @@ shape = SubResource("CircleShape2D_g1t4l")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
 autostart = true
+
+[node name="PixieLight" type="PointLight2D" parent="."]
+color = Color(0.819608, 1, 0.580392, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_vjp4p")
+texture_scale = 3.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

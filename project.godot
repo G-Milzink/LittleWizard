@@ -86,6 +86,8 @@ spell_select={
 2d_physics/layer_3="icon_trigger"
 2d_physics/layer_4="cursor"
 2d_physics/layer_5="repellant"
+2d_physics/layer_6="platform_spell"
+2d_physics/layer_7="pixie"
 
 [rendering]
 
