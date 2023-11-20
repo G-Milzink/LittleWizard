@@ -18,10 +18,13 @@ fill_to = Vector2(0.9, 0.8)
 metadata/_snap_enabled = true
 
 [node name="SpellAmulet" type="Node2D"]
+process_mode = 3
+process_priority = 1
 z_index = 75
 script = ExtResource("1_bpqg2")
 
 [node name="area_orange" type="Area2D" parent="."]
+process_mode = 3
 collision_layer = 0
 collision_mask = 9
 
@@ -30,6 +33,7 @@ process_physics_priority = -1
 polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
 
 [node name="area_green" type="Area2D" parent="."]
+process_mode = 3
 position = Vector2(35, 35)
 collision_layer = 0
 collision_mask = 9
@@ -38,6 +42,7 @@ collision_mask = 9
 polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
 
 [node name="area_blue" type="Area2D" parent="."]
+process_mode = 3
 collision_layer = 0
 collision_mask = 9
 
@@ -46,6 +51,7 @@ position = Vector2(0, 70)
 polygon = PackedVector2Array(-7, -51, 7, -51, 16, -42, 16, -28, 7, -19, -7, -19, -16, -28, -16, -42)
 
 [node name="area_purple" type="Area2D" parent="."]
+process_mode = 3
 position = Vector2(-35, 35)
 collision_layer = 0
 collision_mask = 9

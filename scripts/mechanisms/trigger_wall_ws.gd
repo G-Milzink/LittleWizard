@@ -35,12 +35,8 @@ func _ready():
 func _process(delta):
 	frame = sprite.get_frame()
 	collision.position.y = (direction*128.0) * (float(frame+duration)/59.0)
-	print(frame, ",", collision.position.y)
-	if frame == 59 || frame == 0 :
-		upward_particles.set_emitting(false)
-		downward_particles.set_emitting(false)
 	if overide_switch and overide_switch.active:
-			_Overide()
+		_Overide()
 	else:
 		match nr_of_triggers:
 					1:
@@ -58,6 +54,9 @@ func _process(delta):
 							_Opening()
 						else:
 							_Closing()
+	if frame == 59 || frame == 0 :
+		upward_particles.set_emitting(false)
+		downward_particles.set_emitting(false)
 
 func _Opening():
 	timer.start(closing_delay) 

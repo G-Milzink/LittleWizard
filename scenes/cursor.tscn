@@ -80,6 +80,7 @@ anim_speed_max = 1.0
 size = Vector2(9, 9)
 
 [node name="Cursor" type="StaticBody2D"]
+process_mode = 3
 z_index = 100
 collision_layer = 8
 script = ExtResource("1_n3t4e")
