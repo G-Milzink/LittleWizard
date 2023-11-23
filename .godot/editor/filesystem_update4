@@ -31,3 +31,5 @@ res://scenes/spell_amulet.tscn
 res://scenes/cursor.tscn
 res://scenes/utils/volume_control.tscn
 res://VolumeControl.gd
+res://scripts/utils/Darkness.gd
+res://scenes/player.tscn
