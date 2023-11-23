@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjl4arr5gkf7g"]
+
+[ext_resource type="Script" path="res://VolumeControl.gd" id="1_ipg0u"]
+
+[node name="VolumeControl" type="Node"]
+script = ExtResource("1_ipg0u")

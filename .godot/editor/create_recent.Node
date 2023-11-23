@@ -1,3 +1,4 @@
+Node
 CollisionPolygon2D
 Node2D
 PointLight2D
@@ -11,7 +12,6 @@ StaticBody2D
 Timer
 Sprite2D
 AudioStreamPlayer
-Node
 AudioStreamPlayer2D
 ShapeCast2D
 ParallaxLayer

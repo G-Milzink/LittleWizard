@@ -1,3 +1,5 @@
+res://scenes/utils
+res://scripts/utils
 res://textures/mechanics
 res://0_PNG/particles
 res://textures/areas/ench_forest
@@ -16,7 +18,5 @@ res://scenes/lights
 res://textures
 res://scripts
 res://scenes
-res://scripts/utils
 res://shaders
 res://textures/creatures
-res://0_PNG/creatures
