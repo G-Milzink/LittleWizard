@@ -25,3 +25,4 @@ func _on_area_2d_body_exited(body):
 func _process(delta):
 	var tween = get_tree().create_tween()
 	tween.tween_property(canvas_modulate, "color", current_color, .66)
+
