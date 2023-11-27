@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://1ylybhydarey"]
+[gd_scene load_steps=25 format=3 uid="uid://1ylybhydarey"]
 
 [ext_resource type="Script" path="res://scripts/ench_forest.gd" id="1_oaawi"]
 [ext_resource type="TileSet" uid="uid://cyjy5himrfuh8" path="res://tilesets/ench_forest.tres" id="2_ibnxf"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://brhqgedoclx1t" path="res://0_PNG/paralax/EnchantedForest/EnchantedForest_Clouds_front.png" id="5_ilnd2"]
 [ext_resource type="Texture2D" uid="uid://ckf4gm1blaxnd" path="res://0_PNG/paralax/EnchantedForest/EnchantedForest_fields.png" id="6_o4yhk"]
 [ext_resource type="PackedScene" uid="uid://cpkhp0eynbfj1" path="res://scenes/creatures/moss_guy.tscn" id="10_k8j7p"]
+[ext_resource type="Texture2D" uid="uid://ehl7t621h807" path="res://0_PNG/UI/Icons.png" id="10_q5lwa"]
 [ext_resource type="AudioStream" uid="uid://br3qctv5umxn1" path="res://music/lw_EnchForest.ogg" id="11_3sled"]
 [ext_resource type="AudioStream" uid="uid://dv8hkuham173b" path="res://ambience/forest-ambience-01.wav" id="12_yrn6g"]
 [ext_resource type="Script" path="res://scripts/utils/Darkness.gd" id="13_p6nwg"]
@@ -17,7 +18,57 @@
 [ext_resource type="PackedScene" uid="uid://cjmdbqh07yxo5" path="res://scenes/triggers/buttons/button_01.tscn" id="15_274wp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r887s"]
-size = Vector2(24, 132)
+size = Vector2(127.445, 160.765)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqawh"]
+atlas = ExtResource("10_q5lwa")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pet6"]
+atlas = ExtResource("10_q5lwa")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6cg4"]
+atlas = ExtResource("10_q5lwa")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82hx2"]
+atlas = ExtResource("10_q5lwa")
+region = Rect2(192, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dwqq"]
+atlas = ExtResource("10_q5lwa")
+region = Rect2(256, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imv6a"]
+atlas = ExtResource("10_q5lwa")
+region = Rect2(320, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tmhoo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqawh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pet6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6cg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82hx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dwqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imv6a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="EnchForest" type="Node2D"]
 position = Vector2(26, -7)
@@ -103,14 +154,22 @@ shadow_enabled = true
 
 [node name="EnchForest_to_WizSchool" type="Node2D" parent="Transitions"]
 position = Vector2(-480, 641)
-scale = Vector2(4.28, 1)
 script = ExtResource("3_thbne")
 
 [node name="Area2D" type="Area2D" parent="Transitions/EnchForest_to_WizSchool"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Transitions/EnchForest_to_WizSchool/Area2D"]
-position = Vector2(0, -66)
+visible = false
+position = Vector2(-0.724121, -80.3823)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r887s")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="Transitions/EnchForest_to_WizSchool"]
+modulate = Color(0.572549, 0.572549, 0.572549, 1)
+position = Vector2(-9.39044, -125.423)
+sprite_frames = SubResource("SpriteFrames_tmhoo")
+autoplay = "default"
+speed_scale = 1.8
 
 [node name="SpawnPoints" type="Node2D" parent="."]
 
