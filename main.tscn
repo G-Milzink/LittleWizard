@@ -20,10 +20,11 @@ script = ExtResource("1_ysk1h")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 2
+visible = false
 
-[node name="SpellAmulet" parent="CanvasLayer2" instance=ExtResource("5_dlygp")]
+[node name="SpellAmulet" parent="." instance=ExtResource("5_dlygp")]
 z_index = 0
 
-[node name="Cursor" parent="CanvasLayer2" instance=ExtResource("5_a8wjq")]
+[node name="Cursor" parent="." instance=ExtResource("5_a8wjq")]
 z_index = 20
 z_as_relative = true

@@ -1,3 +1,5 @@
+AnimationPlayer
+TextureButton
 CanvasLayer
 Container
 Button
@@ -11,4 +13,3 @@ PointLight2D
 CharacterBody2D
 Area2D
 GPUParticles2D
-RayCast2D

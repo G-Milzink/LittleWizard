@@ -1,7 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://bk434df6c3i7u"]
+[gd_scene load_steps=13 format=3 uid="uid://bk434df6c3i7u"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_vjjmq"]
 [ext_resource type="Texture2D" uid="uid://cruiuyxj44y00" path="res://0_PNG/Menu/LW_MainTitle_01.png" id="2_pktta"]
+[ext_resource type="Texture2D" uid="uid://ga23j6bajl5f" path="res://textures/UI/Ui_Elements.tres" id="3_3k04h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ywi85"]
+load_path = "res://.godot/imported/UI_elements.png-7e3c832bd686e690c18685db20a95310.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx6f4"]
+atlas = SubResource("CompressedTexture2D_ywi85")
+region = Rect2(128, 0, 64, 32)
 
 [sub_resource type="Gradient" id="Gradient_01a0i"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -12,6 +20,84 @@ gradient = SubResource("Gradient_01a0i")
 [sub_resource type="CanvasTexture" id="CanvasTexture_rw58u"]
 diffuse_texture = SubResource("GradientTexture2D_b0kp6")
 
+[sub_resource type="Animation" id="Animation_6tvff"]
+resource_name = "game_start"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade2Black:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Splash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ykm3j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade2Black:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Splash:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_w207k"]
+resource_name = "splash_screen"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Splash:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wvpcm"]
+_data = {
+"RESET": SubResource("Animation_ykm3j"),
+"game_start": SubResource("Animation_6tvff"),
+"splash_screen": SubResource("Animation_w207k")
+}
+
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -21,18 +107,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjjmq")
 
-[node name="Fade2Black" type="Sprite2D" parent="."]
-scale = Vector2(15.9531, 9)
-texture = SubResource("CanvasTexture_rw58u")
-centered = false
-
 [node name="Splash" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(2.133, 2.133)
 texture = ExtResource("2_pktta")
 centered = false
 
-[node name="Button" type="Button" parent="."]
-offset_left = 434.0
-offset_top = 283.0
-offset_right = 566.0
-offset_bottom = 345.0
+[node name="Button_Play" type="TextureButton" parent="Splash"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -51.0
+offset_right = 67.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+toggle_mode = true
+texture_normal = ExtResource("3_3k04h")
+texture_pressed = SubResource("AtlasTexture_kx6f4")
+texture_hover = ExtResource("3_3k04h")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Fade2Black" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+scale = Vector2(15.9531, 9)
+texture = SubResource("CanvasTexture_rw58u")
+centered = false
+
+[node name="MenuAnimations" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wvpcm")
+}
+autoplay = "splash_screen"
+
+[connection signal="pressed" from="Splash/Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="animation_finished" from="MenuAnimations" to="." method="_on_menu_animations_animation_finished"]

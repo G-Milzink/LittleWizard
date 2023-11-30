@@ -19,7 +19,8 @@ func _physics_process(delta):
 	_handleRepellant()
 	_handleMovement(delta)
 
-	move_and_slide()
+	if _Globals.has_control:
+		move_and_slide()
 	_transmitPlayerPosition()
 
 func _transmitPlayerPosition():

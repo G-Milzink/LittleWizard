@@ -26,3 +26,6 @@ res://scenes/maps/wiz_school.tscn
 res://scenes/world.tscn
 res://scripts/world.gd
 res://scenes/spell_amulet.tscn
+res://autoload/globals.gd
+res://scripts/player.gd
+res://textures/UI/Ui_Elements.tres

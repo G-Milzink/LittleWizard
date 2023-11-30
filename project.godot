@@ -31,10 +31,21 @@ window/size/viewport_width=1024
 window/size/viewport_height=576
 window/size/always_on_top=true
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://0_PNG/UI/Cursor_orange.png"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/horizontal_file_system/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://0_ASESPRITE/": "yellow",
+"res://0_PNG/": "orange",
+"res://autoload/": "teal",
+"res://scenes/": "green",
+"res://scripts/": "red"
+}
 
 [input]
 
