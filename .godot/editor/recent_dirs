@@ -1,3 +1,5 @@
+res://scenes
+res://scripts
 res://0_PNG/UI
 res://autoload
 res://scenes/utils
@@ -17,6 +19,4 @@ res://scenes/spells
 res://scripts/spells
 res://scenes/lights
 res://textures
-res://scripts
-res://scenes
 res://shaders

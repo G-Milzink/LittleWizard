@@ -1,4 +1,4 @@
-res://scenes/maps/wiz_school.tscn
+res://autoload/globals.tscn
 res://textures/areas/wiz_school/wizzarding_school_wall.tres
 res://textures/areas/wiz_school/wizzarding_school_front_assets.tres
 res://textures/areas/wiz_school/wizzarding_school_back_assets.tres
@@ -17,10 +17,11 @@ res://shaders/hold_outline.gdshader
 res://textures/mechanics/TrigDoor_ef_downwards.tres
 res://textures/mechanics/TrigDoor_ef_upwards.tres
 res://textures/cursor_light_orange.tres
-res://scripts/transitions/WizSchool_to_EnchForest.gd
-res://autoload/globals.tscn
 res://main.tscn
+res://scenes/menu.tscn
+res://scenes/cursor.tscn
+res://scripts/cursor.gd
+res://scripts/Menu.gd
+res://scenes/maps/wiz_school.tscn
 res://scenes/world.tscn
-res://scenes/maps/ench_forest.tscn
-res://scenes/triggers/ladder_trigger.tscn
-res://scripts/transitions/EnchForest_to_WizSchool.gd
+res://scripts/world.gd

@@ -1,3 +1,7 @@
+CanvasLayer
+Button
+Sprite2D
+Control
 AnimatedSprite2D
 Node
 CollisionPolygon2D
@@ -8,19 +12,3 @@ Area2D
 GPUParticles2D
 RayCast2D
 CollisionShape2D
-StaticBody2D
-Timer
-Sprite2D
-AudioStreamPlayer
-AudioStreamPlayer2D
-ShapeCast2D
-ParallaxLayer
-ParallaxBackground
-Marker2D
-TileMap
-AnimationPlayer
-LightOccluder2D
-DirectionalLight2D
-CanvasModulate
-OmniLight3D
-Camera2D

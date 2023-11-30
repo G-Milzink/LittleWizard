@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk434df6c3i7u"]
+
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_vjjmq"]
+[ext_resource type="Texture2D" uid="uid://cruiuyxj44y00" path="res://0_PNG/Menu/LW_MainTitle_01.png" id="2_pktta"]
+
+[sub_resource type="Gradient" id="Gradient_01a0i"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b0kp6"]
+gradient = SubResource("Gradient_01a0i")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rw58u"]
+diffuse_texture = SubResource("GradientTexture2D_b0kp6")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjjmq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fade2Black" type="Sprite2D" parent="CanvasLayer"]
+scale = Vector2(15.9531, 9)
+texture = SubResource("CanvasTexture_rw58u")
+centered = false
+
+[node name="Splash" type="Sprite2D" parent="CanvasLayer"]
+scale = Vector2(2.133, 2.133)
+texture = ExtResource("2_pktta")
+centered = false
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 434.0
+offset_top = 283.0
+offset_right = 566.0
+offset_bottom = 345.0
