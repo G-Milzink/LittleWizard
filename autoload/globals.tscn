@@ -13,4 +13,5 @@ MuteMusic = false
 MusicVolume = 0.2
 MuteAmbience = false
 AmbienceVolume = 0.3
-starting_map = 1
+starting_map = 0
+menu_open = true

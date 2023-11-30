@@ -21,19 +21,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjjmq")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Fade2Black" type="Sprite2D" parent="CanvasLayer"]
+[node name="Fade2Black" type="Sprite2D" parent="."]
 scale = Vector2(15.9531, 9)
 texture = SubResource("CanvasTexture_rw58u")
 centered = false
 
-[node name="Splash" type="Sprite2D" parent="CanvasLayer"]
+[node name="Splash" type="Sprite2D" parent="."]
 scale = Vector2(2.133, 2.133)
 texture = ExtResource("2_pktta")
 centered = false
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="Button" type="Button" parent="."]
 offset_left = 434.0
 offset_top = 283.0
 offset_right = 566.0

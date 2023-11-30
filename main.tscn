@@ -1,18 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://35mr2mts3r5d"]
+[gd_scene load_steps=7 format=3 uid="uid://35mr2mts3r5d"]
 
 [ext_resource type="PackedScene" uid="uid://cn20awjyy813y" path="res://scenes/world.tscn" id="1_kwfk0"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_ysk1h"]
 [ext_resource type="PackedScene" uid="uid://w21k2qf8gfuu" path="res://scenes/cursor.tscn" id="5_a8wjq"]
 [ext_resource type="PackedScene" uid="uid://bfhr7hwgphamp" path="res://scenes/spell_amulet.tscn" id="5_dlygp"]
 [ext_resource type="PackedScene" uid="uid://cjl4arr5gkf7g" path="res://scenes/utils/volume_control.tscn" id="5_nhi6o"]
+[ext_resource type="PackedScene" uid="uid://bk434df6c3i7u" path="res://scenes/menu.tscn" id="6_s05xy"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ysk1h")
 
 [node name="World" parent="." instance=ExtResource("1_kwfk0")]
 
-[node name="SpellAmulet" parent="." instance=ExtResource("5_dlygp")]
-
-[node name="Cursor" parent="." instance=ExtResource("5_a8wjq")]
-
 [node name="VolumeControl" parent="." instance=ExtResource("5_nhi6o")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="CanvasLayer" instance=ExtResource("6_s05xy")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="SpellAmulet" parent="CanvasLayer2" instance=ExtResource("5_dlygp")]
+z_index = 0
+
+[node name="Cursor" parent="CanvasLayer2" instance=ExtResource("5_a8wjq")]
+z_index = 20
+z_as_relative = true
