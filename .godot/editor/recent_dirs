@@ -1,3 +1,5 @@
+res://0_PNG/Lanterns
+res://scenes/lanterns_01
 res://0_PNG/UI
 res://textures/UI
 res://scenes
@@ -18,5 +20,3 @@ res://scenes/mechanisms
 res://textures/triggers
 res://scenes/spells
 res://scripts/spells
-res://scenes/lights
-res://textures

@@ -1,3 +1,7 @@
+PointLight2D
+CollisionShape2D
+Area2D
+AnimatedSprite2D
 AnimationPlayer
 TextureButton
 CanvasLayer
@@ -5,11 +9,6 @@ Container
 Button
 Sprite2D
 Control
-AnimatedSprite2D
 Node
 CollisionPolygon2D
 Node2D
-PointLight2D
-CharacterBody2D
-Area2D
-GPUParticles2D

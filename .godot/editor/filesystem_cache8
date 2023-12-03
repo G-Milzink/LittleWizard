@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701628588
+::res://::1701628654
 default_bus_layout.tres::AudioBusLayout::4785896726106281760::1700318077::0::1::::<><>::
 icon.svg::CompressedTexture2D::1527858115067247124::1699302795::1699302800::1::::<><>::
 main.tscn::PackedScene::2027979354452836003::1701478801::0::1::::<><>::uid://cn20awjyy813y::::res://scenes/world.tscn<>res://scripts/main.gd<>uid://w21k2qf8gfuu::::res://scenes/cursor.tscn<>uid://bfhr7hwgphamp::::res://scenes/spell_amulet.tscn<>uid://cjl4arr5gkf7g::::res://scenes/utils/volume_control.tscn<>uid://bk434df6c3i7u::::res://scenes/menu.tscn
 VolumeControl.gd::GDScript::-1::1700756286::0::1::::<>Node<>::
 ::res://0_ASESPRITE/::1701627957
 ::res://0_ASESPRITE/palettes/::1700421118
+::res://0_JUICE_FX/::1701628660
 ::res://0_PNG/::1701628125
 ::res://0_PNG/creatures/::1699917021
 ::res://0_PNG/creatures/MossGuy/::1699917594
@@ -17,9 +18,9 @@ MossGuy_s.png::CompressedTexture2D::2918999395081999120::1699917590::1699917594:
 Ladders.png::CompressedTexture2D::5415886266828462947::1699741548::1699804712::1::::<><>::
 Ladders_n.png::CompressedTexture2D::8023690059393694649::1699804772::1699804781::1::::<><>::
 Ladders_s.png::CompressedTexture2D::4893847517134333209::1699804772::1699804781::1::::<><>::
-::res://0_PNG/Lanterns/::1701628575
+::res://0_PNG/Lanterns/::1701628590
 lantern_01_base.png::CompressedTexture2D::8621270732510734767::1701628264::1701628590::1::::<><>::
-lantern_01_shine.png::CompressedTexture2D::7405967796704106882::1701628575::1701628590::1::::<><>::
+lantern_01_shine.png::CompressedTexture2D::7405967796704106882::1701628800::1701628820::1::::<><>::
 ::res://0_PNG/mechanics/::1700247384
 ::res://0_PNG/mechanics/triggerDoors/::1700431390
 TrigDoor_EF_downward.png::CompressedTexture2D::9023433721739613145::1700431324::1700431390::1::::<><>::
