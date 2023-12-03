@@ -1,4 +1,5 @@
 res://autoload/globals.tscn
+res://scripts/world.gd
 res://textures/areas/wiz_school/wizzarding_school_wall.tres
 res://textures/areas/wiz_school/wizzarding_school_front_assets.tres
 res://textures/areas/wiz_school/wizzarding_school_back_assets.tres
@@ -17,15 +18,9 @@ res://shaders/hold_outline.gdshader
 res://textures/mechanics/TrigDoor_ef_downwards.tres
 res://textures/mechanics/TrigDoor_ef_upwards.tres
 res://textures/cursor_light_orange.tres
+res://textures/UI/Ui_Elements.tres
 res://main.tscn
 res://scenes/menu.tscn
 res://scenes/cursor.tscn
-res://scripts/cursor.gd
-res://scripts/Menu.gd
-res://scenes/maps/wiz_school.tscn
 res://scenes/world.tscn
-res://scripts/world.gd
-res://scenes/spell_amulet.tscn
-res://autoload/globals.gd
-res://scripts/player.gd
-res://textures/UI/Ui_Elements.tres
+res://scenes/maps/wiz_school.tscn
