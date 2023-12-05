@@ -1,3 +1,4 @@
+res://scenes/creatures/moss_guy.tscn
 res://scripts/world.gd
 res://textures/areas/wiz_school/wizzarding_school_wall.tres
 res://textures/areas/wiz_school/wizzarding_school_front_assets.tres
@@ -18,8 +19,6 @@ res://textures/mechanics/TrigDoor_ef_downwards.tres
 res://textures/mechanics/TrigDoor_ef_upwards.tres
 res://textures/cursor_light_orange.tres
 res://textures/UI/Ui_Elements.tres
-res://scenes/lanterns_01/lantern_01.gd
-res://scenes/maps/ench_forest.tscn
 res://autoload/globals.tscn
 res://main.tscn
 res://scenes/menu.tscn
@@ -27,3 +26,4 @@ res://scenes/cursor.tscn
 res://scenes/world.tscn
 res://scenes/maps/wiz_school.tscn
 res://scenes/lanterns_01/lantern_01.tscn
+res://scenes/maps/ench_forest.tscn

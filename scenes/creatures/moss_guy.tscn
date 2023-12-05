@@ -5,6 +5,7 @@
 [ext_resource type="Shader" path="res://shaders/hold_outline.gdshader" id="2_7s5np"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a4rlw"]
+resource_local_to_scene = true
 shader = ExtResource("2_7s5np")
 shader_parameter/outline_color = Color(1, 0.45098, 0, 1)
 shader_parameter/width = 2.0
